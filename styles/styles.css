@@ -1,3 +1,16 @@
 h1 {
    color: red;
 }
+
+.body {
+   background-color: rgb(229 229 229);
+}
+
+.body__h1 {
+   color: green;
+}
+
+.body__p {
+   text-decoration: underline;
+   ;
+}
