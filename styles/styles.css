@@ -52,7 +52,6 @@ body {
 
 .main {
    flex: 1 0 auto;
-   background-color: coral;
 }
 
 .page-header__logo {
@@ -251,6 +250,43 @@ body {
 .listing__event-card {
    width: calc(33.3333% - 60px);
    margin: 0 30px 120px;
+}
+
+.event {
+   padding: 40px 0 150px;
+}
+
+.reserve {
+   display: grid;
+   gap: 65px 11%;
+   grid-template-columns: 405px calc(89% - 405px);
+   grid-template-areas:
+      "checks scheme"
+      "order legend";
+   width: 100%;
+}
+
+.reserve__checks {
+   grid-area: checks;
+}
+
+.reserve__order {
+   grid-area: order;
+}
+
+.reserve__scheme {
+   grid-area: scheme;
+}
+
+.reserve__scheme {
+   grid-area: scheme;
+}
+
+.reserve>div {
+   box-sizing: border-box;
+   padding: 10px;
+   background-color: coral;
+   text-align: center;
 }
 
 .page-footer {
