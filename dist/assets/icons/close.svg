@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+
+      <symbol width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" id="x">
+      <circle cx="30" cy="30" r="30" fill="#1F1E1E"/>
+      <path d="M36 24L24 36" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M24 24L36 36" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+   </defs>
+</svg>
