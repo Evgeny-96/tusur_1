@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-event-popup">
+<!-- <html lang="ru" class="show-event-popup"> -->
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +26,27 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
-        <a href="#" class="btn page-header__user-btn">
+        <a href="#" class="page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
 
@@ -41,78 +58,235 @@
       <section class="listing events__listing">
         <h2 class="listing__title section-title">Мероприятия</h2>
         <div class="listing__events-list">
-          @@loop('blocks/event-cart.html', [
-          {
-          "class": "listing__event-card",
-          "img": "assets/images/events/nirvana.jpg",
-          "alt": "nirvana",
-          "title": "Собираемся и слушаем альбом Nirvana",
-          "descr": "Это третий альбом группы...",
-          "time": "07.12.2022 | начало 18.00",
-          "datetime": "2022-12-07T18:00"
-          },
-          {
-          "class": "listing__event-card",
-          "img": "assets/images/events/stuff.jpg",
-          "alt": "stuff",
-          "title": "Есть тема, нужно обсудить с HowStuffWorks",
-          "descr": "Один из самых популярных подкастов в мире...",
-          "time": "14.12.2022 | начало 18.30",
-          "datetime": "2022-12-14T18:30"
-          },
-          {
-          "class": "listing__event-card",
-          "img": "assets/images/events/sade.jpg",
-          "alt": "sade",
-          "title": "Вечер | The Best of Sade",
-          "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза,
-          ритм-блюза и фанка.",
-          "time": "16.12.2022 | начало 20.00",
-          "datetime": "2022-12-16T20:00"
-          }
-          ])
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+              <p class="event-card__description">Это третий альбом группы...</p>
+              <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+            </a>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+              <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+              <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+            </a>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+              <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+              <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+            </a>
+          </article>
         </div>
       </section>
       <section class="listing @@class">
         <h2 class="listing__title section-title">Блог</h2>
         <div class="listing__article-list">
-          <!-- prettier-ignore -->
-          @@loop('article-card.html', [
-          {
-          "class": "listing__article-card",
-          "img": "assets/images/blog/theatre.jpg",
-          "alt": "Theatre Photosession",
-          "title": "Фотосессия в стенах Театра драмы",
-          "descr": "Организовывая фотосессию для...",
-          "time": "26.11.2021",
-          "datetime": "2021-11-26T00:00"
-          },
-          {
-          "class": "listing__article-card",
-          "img": "assets/images/blog/vr.jpg",
-          "alt": "выставка VR",
-          "title": "Выставка VR в Томске",
-          "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем
-          нашим клиентам лучший игровой VR-опыт в Томске.",
-          "time": "05.11.2022",
-          "datetime": "2022-11-05T00:00"
-          },
-          {
-          "class": "listing__article-card",
-          "img": "assets/images/blog/radio.jpg",
-          "alt": "rocking radio",
-          "title": "Rocking radio в заброшенном ангаре",
-          "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы
-          организовать лучшую вечеринку года для ребят из Новосибирска.",
-          "time": "01.11.2022",
-          "datetime": "2022-11-01T00:00"
-          },
-          ])
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <!-- <div class="article-card__arrow arrow">
+            <svg class="arrow__icon" width="92" height="62">
+               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+         </div> -->
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">Организовывая фотосессию для...</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/vr.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/vr.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/vr_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/vr_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/vr.webp" />
+                <img src="assets/images/blog/vr.jpg" alt="выставка VR" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
+                <!-- <div class="article-card__arrow arrow">
+            <svg class="arrow__icon" width="92" height="62">
+               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+         </div> -->
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/radio.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <img src="assets/images/blog/radio.jpg" alt="rocking radio" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                <!-- <div class="article-card__arrow arrow">
+            <svg class="arrow__icon" width="92" height="62">
+               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+         </div> -->
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+            </div>
+          </article>
         </div>
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
       <!-- Здесь будут дополнительные услуги -->
     </div>
+    <table class="events__tariffs-table  table">
+      <thead class="table__head">
+        <tr class="table__head-tr">
+          <th class="table__th"></th>
+          <th class="table__th">Тариф «Light»</th>
+          <th class="table__th">Тариф «Promo»</th>
+          <th class="table__th">Тариф «All stars»</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <tr class="table__tr">
+          <th class="table__body-th">Стоимость за час</th>
+          <td class="table__td">1 000 ₽</td>
+          <td class="table__td">3 000 ₽</td>
+          <td class="table__td">3 000 ₽</td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Ведущий мероприятия</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Фотосъемка</th>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Видеосъемка</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Организация питания</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Декор</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Звуковое сопровождение</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Дополнительное освещение</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+
+        <tr class="table__tr">
+          <th class="table__body-th">Клининг</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot class="table__footer">
+        <tr class="table__footer-tr">
+          <th class="table__footer-th"></th>
+          <th class="table__footer-th">Тариф «Light»</th>
+          <th class="table__footer-th">Тариф «Promo»</th>
+          <th class="table__footer-th">Тариф «All stars»</th>
+        </tr>
+      </tfoot>
+    </table>
   </main>
   <footer class="page-footer"></footer>
   <div class="pp" id="eventPP">
@@ -223,8 +397,7 @@
               <input type="checkbox" name="agree" class="check__input" required checked />
               <span class="check__mark"></span>
               <span class="check__label check__label--s">
-                Я соглашаюсь с пользовательским соглашением и с политикой
-                использования персональных данных
+                Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных
               </span>
             </label>
           </div>
