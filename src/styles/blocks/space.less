@@ -1,0 +1,160 @@
+.space {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   max-width: 1414px;
+   margin: 0 auto;
+   padding-left: 40px;
+   padding-right: 40px;
+
+   &__h1 {
+      text-transform: uppercase;
+      color: @black;
+      font-weight: 400;
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: 465px;
+      margin-top: 0;
+
+      @media @bw1660 {
+         font-size: 35px;
+         margin-bottom: 397px;
+      }
+
+      @media @bw1340 {
+         font-size: 30px;
+         margin-bottom: 265px;
+      }
+
+      @media @bw1020 {
+         margin-bottom: 215px;
+      }
+
+      @media @bw768 {
+         font-size: 13px;
+         margin-bottom: 190px;
+      }
+
+      @media @bw600 {
+         margin-bottom: 170px;
+      }
+
+      @media @bw450 {
+         margin-bottom: 130px;
+      }
+   }
+
+   &__title {
+      position: absolute;
+      width: 100%;
+      height: 325px;
+      left: 0;
+      right: 0;
+      top: 375px;
+
+      @media @bw1660 {
+         height: 257px;
+         top: 326px;
+      }
+
+      @media @bw1340 {
+         height: 215px;
+         top: 280px;
+      }
+
+      @media @bw1020 {
+         height: 165px;
+      }
+
+      @media @bw768 {
+         height: 145px;
+         top: 196px;
+      }
+
+      @media @bw600 {
+         height: 120px;
+      }
+
+      @media @bw450 {
+         height: 74px;
+      }
+   }
+
+   &__title svg {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__p {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 400;
+      font-size: 45px;
+      margin: 0;
+
+      @media @bw1660 {
+         font-size: 35px;
+      }
+
+      @media @bw1340 {
+         font-size: 30px;
+      }
+
+      @media @bw768 {
+         font-size: 13px;
+      }
+   }
+
+   &__wish {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 100px;
+
+      @media @bw1340 {
+         margin-top: 73px;
+      }
+
+      @media @bw768 {
+         margin-top: 40px;
+      }
+   }
+
+   &__wish-p {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 22px;
+      margin-bottom: 46px;
+
+      @media @bw1340 {
+         font-size: 16px;
+      }
+
+      @media @bw768 {
+         font-size: 13px;
+         margin-bottom: 25px;
+      }
+   }
+
+   &__btn {
+      width: 624px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media @bw768 {
+         flex-direction: column;
+         width: auto;
+      }
+   }
+
+   &__btn .btn:first-child {
+      @media @bw768 {
+         margin-bottom: 25px; //внутренние отступы кнопок при разных размерах
+      }
+   }
+}

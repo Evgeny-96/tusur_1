@@ -54,98 +54,220 @@
 
   <main class="main">
     <div class="home">
-      <!-- прочая разметка -->
-      <!-- prettier-ignore -->
-      <div class="listing__article-list">
-        <article class="article-card listing__article-card">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/blog/theatre.jpg" />
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
-              <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
-              <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
-              <!-- <div class="article-card__arrow arrow">
-            <svg class="arrow__icon" width="92" height="62">
-               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-         </div> -->
+      <section class="space">
+        <h1 class="space__h1">Арт - пространство</h1>
+        <div class="space__title">
+          <svg>
+            <use xlink:href="assets/icons/symbols.svg#lenni"></use>
+          </svg>
+        </div>
+        <p class="space__p">Для людей, горящих сердцем и делом</p>
+        <p class="space__p">Место для настоящего</p>
+        <div class="space__wish">
+          <p class="space__wish-p">Я хочу</p>
+          <div class="space__btn">
+            <button type="submit" class="btn btn--red">Провести мероприятие</button>
+            <button type="submit" class="btn btn--white">Стать арендатором</button>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <h2 class="section-title">О нас</h2>
+        <div class="about__block">
+          <h4 class="about__title">Проект «Millennials»</h4>
+          <p class="about__content about__content-grid">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
+            желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их
+            мечту в реальность.</p>
+          <picture class="about__picture">
+            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/sebastiaan_mob.webp" />
+            <source media="(max-width: 450px)" srcset="assets/images/about/sebastiaan_mob.jpg" />
+            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/sebastiaan_tablet.webp" />
+            <source media="(max-width: 1169px)" srcset="assets/images/about/sebastiaan_tablet.jpg" />
+            <source type="image/webp" srcset="assets/images/about/sebastiaan.webp" />
+            <img src="assets/images/about/sebastiaan.jpg" alt="sebastiaan" class="about__img" />
+          </picture>
+          <picture class="about__picture">
+            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/matheus_mob.webp" />
+            <source media="(max-width: 450px)" srcset="assets/images/about/matheus_mob.jpg" />
+            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/matheus_tablet.webp" />
+            <source media="(max-width: 1169px)" srcset="assets/images/about/matheus_tablet.jpg" />
+            <source type="image/webp" srcset="assets/images/about/matheus.webp" />
+            <img src="assets/images/about/matheus.jpg" alt="sebastiaan" class="about__img" />
+          </picture>
+          <h4 class="about__title">Мы предоставляем площади для вашего мероприятия</h4>
+          <p class="about__content about__content-grid">И оказываем помощь с организацией, если вам это нужно.
+            <br />Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+          </p>
+          <picture class="about__picture">
+            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/riciardus_mob.webp" />
+            <source media="(max-width: 450px)" srcset="assets/images/about/riciardus_mob.jpg" />
+            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/riciardus_tablet.webp" />
+            <source media="(max-width: 1169px)" srcset="assets/images/about/riciardus_tablet.jpg" />
+            <source type="image/webp" srcset="assets/images/about/riciardus.webp" />
+            <img src="assets/images/about/riciardus.jpg" alt="riciardus" class="about__img" />
+          </picture>
+          <div class="about__look">
+            <p class="about__look-content">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
+            <a href="#" class="about__link">
+              <p class="about__link-text">Смотреть</p>
               <button type="button" class="arrow">
-                <svg class="arrow__icon" width="92" height="62">
+                <svg class="arrow__icon" width="92" height="60">
                   <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                 </svg>
               </button>
             </a>
-            <p class="article-card__description">Организовывая фотосессию для...</p>
           </div>
-        </article>
-        <article class="article-card listing__article-card">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/vr.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/blog/vr.jpg" />
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/vr_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/blog/vr_tablet.jpg" />
-              <source type="image/webp" srcset="assets/images/blog/vr.webp" />
-              <img src="assets/images/blog/vr.jpg" alt="выставка VR" class="article-card__img" />
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Выставка VR в Томске</h4>
-              <!-- <div class="article-card__arrow arrow">
-            <svg class="arrow__icon" width="92" height="62">
-               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-         </div> -->
-              <button type="button" class="arrow">
-                <svg class="arrow__icon" width="92" height="62">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-              </button>
+        </div>
+      </section>
+      <section class="home__listing listing events__listing">
+        <h2 class="listing__title section-title">Мероприятия</h2>
+        <div class="listing__events-list">
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/events/nirvana_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
+                <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+              <p class="event-card__description">Это третий альбом группы...</p>
+              <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
             </a>
-            <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
-          </div>
-        </article>
-        <article class="article-card listing__article-card">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/blog/radio.jpg" />
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
-              <source type="image/webp" srcset="assets/images/blog/radio.webp" />
-              <img src="assets/images/blog/radio.jpg" alt="rocking radio" class="article-card__img" />
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
-              <!-- <div class="article-card__arrow arrow">
-            <svg class="arrow__icon" width="92" height="62">
-               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-         </div> -->
-              <button type="button" class="arrow">
-                <svg class="arrow__icon" width="92" height="62">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-              </button>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/events/stuff_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/events/stuff.webp" />
+                <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+              <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+              <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
             </a>
-            <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
-          </div>
-        </article>
-      </div>
-      <!-- прочая разметка -->
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/sade_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/events/sade_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/sade_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/events/sade_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/events/sade.webp" />
+                <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
+              </picture>
+              <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+              <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+              <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+            </a>
+          </article>
+        </div>
+        <div class="home__pagination">
+          <button type="button" class="arrow home__arrow">
+            <svg class="arrow__icon" width="92" height="62">
+              <use xlink:href="assets/icons/symbols.svg#arrow_prev"></use>
+            </svg>
+          </button>
+          <div class="home__dot"></div>
+          <div class="home__dot"></div>
+          <div class="home__dot active"></div>
+          <div class="home__dot"></div>
+          <div class="home__dot"></div>
+          <button type="button" class="arrow home__arrow">
+            <svg class="arrow__icon" width="92" height="62">
+              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="home__all">Смотреть всё</a>
+      </section>
+      <section class="home__blog listing events__listing">
+        <h2 class="listing__title section-title">Блог</h2>
+        <div class="listing__article-list">
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было</p>
+            </div>
+          </article>
+          <!-- <hr class="line"> -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/vr_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/vr_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/vr_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/vr_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/vr.webp" />
+                <img src="assets/images/blog/vr.jpg" alt="выставка VR" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
+            </div>
+          </article>
+          <!-- <hr class="line"> -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio_mob.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/radio_mob.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <img src="assets/images/blog/radio.jpg" alt="rocking radio" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                <button type="button" class="arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </a>
+              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+            </div>
+          </article>
+          <!-- <hr class="line"> -->
+        </div>
+        <a href="#" class="listing__link link">Смотреть все</a>
+      </section>
     </div>
   </main>
   <footer class="page-footer"></footer>

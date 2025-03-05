@@ -1,8 +1,8 @@
 <article class="article-card @@class">
    <a href="#" class="article-card__link">
       <picture class="article-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="@@img_webp" />
-         <source media="(max-width: 450px)" srcset="@@img" />
+         <source media="(max-width: 450px)" type="image/webp" srcset="@@img_mob_webp" />
+         <source media="(max-width: 450px)" srcset="@@img_mob" />
          <source media="(max-width: 1169px)" type="image/webp" srcset="@@img_tablet_webp" />
          <source media="(max-width: 1169px)" srcset="@@img_tablet" />
          <source type="image/webp" srcset="@@img_webp" />
@@ -13,11 +13,6 @@
       <time datetime="@@datetime" class="article-card__time">@@time</time>
       <a href="#" class="article-card__title-link">
          <h4 class="article-card__title">@@title</h4>
-         <!-- <div class="article-card__arrow arrow">
-            <svg class="arrow__icon" width="92" height="62">
-               <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-         </div> -->         
          <button type="button" class="arrow">
             <svg class="arrow__icon" width="92" height="62">
                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
@@ -27,3 +22,4 @@
       <p class="article-card__description">@@descr</p>
    </div>
 </article>
+<!-- <hr class="line"> -->

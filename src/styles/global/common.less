@@ -45,6 +45,12 @@ body {
 a {
   color: #1F1E1E;
   outline: none;
+  text-decoration: none;
+
+  &:hover {
+    color: @red;
+    text-decoration: underline;
+  }
 }
 
 img {
@@ -652,10 +658,6 @@ button {
     text-decoration: underline;
     transition: color 0.2s;
     cursor: pointer;
-
-    &:hover {
-      color: @red;
-    }
   }
 
   blockquote {
