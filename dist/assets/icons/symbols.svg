@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 92 62"><g fill="none">
-    <path d="M40 52.213a29.836 29.836 0 0 0 15.297 8.21 29.76 29.76 0 0 0 17.26-1.707 29.902 29.902 0 0 0 13.408-11.049A30.089 30.089 0 0 0 91 31a30.089 30.089 0 0 0-5.035-16.667 29.902 29.902 0 0 0-13.407-11.05 29.76 29.76 0 0 0-17.262-1.707A29.837 29.837 0 0 0 40 9.786" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round"/>
-    <path d="M5 31h60M58 24l7 7-7 7" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 52.213a29.836 29.836 0 0 0 15.297 8.21 29.76 29.76 0 0 0 17.26-1.707 29.902 29.902 0 0 0 13.408-11.049A30.089 30.089 0 0 0 91 31a30.089 30.089 0 0 0-5.035-16.667 29.902 29.902 0 0 0-13.407-11.05 29.76 29.76 0 0 0-17.262-1.707A29.837 29.837 0 0 0 40 9.786" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 31h60M58 24l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="arrow_prev" viewBox="0 0 92 62"><g fill="none">
     <path d="M52 9.787a29.836 29.836 0 0 0-15.297-8.21 29.76 29.76 0 0 0-17.26 1.707A29.902 29.902 0 0 0 6.034 14.333 30.09 30.09 0 0 0 1 31a30.09 30.09 0 0 0 5.035 16.667 29.903 29.903 0 0 0 13.407 11.05 29.76 29.76 0 0 0 17.261 1.706A29.836 29.836 0 0 0 52 52.213" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round"/>
     <path d="M87 31H27M34 38l-7-7 7-7" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

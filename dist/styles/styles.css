@@ -1148,6 +1148,7 @@ button {
 }
 .arrow:hover {
   color: #bc3324;
+  fill: #bc3324;
 }
 .arrow__icon {
   width: 100%;
