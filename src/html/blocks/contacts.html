@@ -1,0 +1,35 @@
+<div class="contacts__block">
+   <div class="contacts__places">
+      @@loop('contacts-places.html', [
+      {
+      "class": "contacts",
+      "classImg": "contacts",
+      "svg": "circle",
+      "title": "Томск, Белая 8",
+      "text": "<p class='contacts__place-text'>2 этаж</p><p class='contacts__place-text'>оф. 207-208</p>"
+      },
+      {
+      "class": "contacts",
+      "classImg": "contacts",
+      "svg": "house",
+      "title": "Отдел аренды",
+      "text": "<a href='tel:74993500730' class='contacts__place-tel'>+7 499 350 0730</a><a href='mailto:hi@tagree.ru' class='contacts__place-mail'>hi@tagree.ru</a>"
+      },
+      {
+      "class": "contacts",
+      "classImg": "contacts",
+      "svg": "star",
+      "title": "Отдел мероприятий",
+      "text": "<a href='tel:74993500730' class='contacts__place-tel'>+7 499 350 0730</a><a href='mailto:hi@tagree.ru' class='contacts__place-mail'>hi@tagree.ru</a>"
+      },
+      ])
+   </div>
+   <picture class="contacts__picture">
+      <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/contacts/map_mob.webp" />
+      <source media="(max-width: 450px)" srcset="assets/images/contacts/map_mob.jpg" />
+      <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/contacts/map_tablet.webp" />
+      <source media="(max-width: 1169px)" srcset="assets/images/contacts/map_tablet.jpg" />
+      <source type="image/webp" srcset="assets/images/contacts/map.webp" />
+      <img src="assets/images/about/map.jpg" alt="map" class="contacts__img" />
+   </picture>
+</div>

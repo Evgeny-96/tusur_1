@@ -1,0 +1,11 @@
+<svg viewBox="0 0 95 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="27.5" y="0.5" width="40" height="93" stroke="#1F1E1E"/>
+<circle cx="12" cy="12" r="11.5" stroke="currentColor"/>
+<circle cx="83" cy="13" r="11.5" stroke="currentColor"/>
+<circle cx="12" cy="45" r="11.5" stroke="currentColor"/>
+<circle cx="83" cy="46" r="11.5" stroke="currentColor"/>
+<circle cx="12" cy="78" r="11.5" stroke="currentColor"/>
+<circle cx="83" cy="79" r="11.5" stroke="currentColor"/>
+<circle cx="48" cy="109" r="11.5" stroke="currentColor"/>
+<path d="M45.1992 56H41.2832V48.4414C41.2832 47.5234 41.3027 46.6836 41.3418 45.9219C41.1009 46.2148 40.8014 46.5208 40.4434 46.8398L38.8223 48.1777L36.8203 45.7168L41.7227 41.7227H45.1992V56ZM56.918 56H53.002V48.4414C53.002 47.5234 53.0215 46.6836 53.0605 45.9219C52.8197 46.2148 52.5202 46.5208 52.1621 46.8398L50.541 48.1777L48.5391 45.7168L53.4414 41.7227H56.918V56Z" fill="currentColor"/>
+</svg>

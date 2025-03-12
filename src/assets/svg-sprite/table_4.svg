@@ -1,0 +1,9 @@
+<svg viewBox="0 0 111 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="27.5" width="83" height="28" stroke="currentColor"/>
+<path d="M47.416 44.2363H45.8438V47H42.0352V44.2363H36.3418V41.4043L42.2793 32.7227H45.8438V41.3555H47.416V44.2363ZM42.0352 41.3555V39.6953C42.0352 39.3828 42.0449 38.9629 42.0645 38.4355C42.0905 37.9017 42.11 37.6217 42.123 37.5957H42.0156C41.7943 38.097 41.5436 38.5658 41.2637 39.002L39.6816 41.3555H42.0352Z" fill="currentColor"/>
+<circle cx="20" cy="12" r="11.5" stroke="currentColor"/>
+<circle cx="63" cy="12" r="11.5" stroke="currentColor"/>
+<circle cx="99" cy="40" r="11.5" stroke="currentColor"/>
+<circle cx="63" cy="71" r="11.5" stroke="currentColor"/>
+<circle cx="20" cy="71" r="11.5" stroke="currentColor"/>
+</svg>

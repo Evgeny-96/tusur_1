@@ -7,23 +7,261 @@
    @@include('blocks/page-header.html')
 
    <main class="main">
-      <!-- Здесь будут хлебные крошки -->
+      <div class="breadcrumbs">
+         <ul class="breadcrumbs__ul">
+            @@loop('blocks/breadcrumbs-li.html', [
+            {
+            "link": "#",
+            "class": "breadcrumbs",
+            "text": "Главная"
+            },
+            {
+            "link": "#",
+            "class": "breadcrumbs",
+            "text": "Мероприятия"
+            },
+            {
+            "link": "#",
+            "class": "breadcrumbs",
+            "text": "Вечер | The Best of Sade"
+            }
+            ])
+         </ul>
+      </div>
 
       <article class="event">
-         <!-- Здесь пропущенное содержимое страницы -->
+         <h1 class="event__title">Вечер | The Best of Sade</h1>
+         <div class="event__about">
+            <div class="event__name">
+               <div class="event__name-date">16/12/2022</div>
+               <div class="event__name-name">Кафе «Птичка»</div>
+            </div>
+            <picture class="event__picture">
+               <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/sade_mob.webp" />
+               <source media="(max-width: 450px)" srcset="assets/images/events/sade_mob.jpg" />
+               <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/sade_tablet.webp" />
+               <source media="(max-width: 1169px)" srcset="assets/images/events/sade_tablet.jpg" />
+               <source type="image/webp" srcset="assets/images/events/sade.webp" />
+               <img src="assets/images/events/sade.jpg" alt="sade" class="event__picture-img" />
+            </picture>
+            <div class="event__start">
+               <div class="event__start-time"><span class="event__start-span">20:00</span> начало</div>
+               <div class="event__start-addr">Ленина 10 | 2 этаж</div>
+            </div>
+         </div>
+
+         <div class="event__text">
+            <h2 class="event__text-title event__text-title--reserve">Программа мероприятия:</h2>
+            <ul class="event__ul">
+               <li class="event__ul-li">20:15 — Приветствие гостей</li>
+               <li class="event__ul-li">20:30 — Первая подача блюд | Салаты</li>
+               <li class="event__ul-li">20:40 — Живой вокал | Композиции 1-3</li>
+               <li class="event__ul-li">21:20 — Подача горячих блюд</li>
+               <li class="event__ul-li">21:30 — Живой вокал | Композиции 4-7</li>
+               <li class="event__ul-li">22:15 — Подача десерт</li>
+               <li class="event__ul-li">22:30 — Живой вокал | Композиции 8-9</li>
+               <li class="event__ul-li">23:00 — Завершение вечера</li>
+            </ul>
+            <h2 class="event__text-title event__text-title--mb15 event__text-title--reserve">The Best Of Sade</h2>
+            <p class="event__text-text">Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков,
+               включая самые популярные хиты группы, раритеты и их любимые треки.</p>
+            <p class="event__text-text">Группа продемонстрировала необычайное долголетие и креативность своей творческой
+               карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и
+               продав более 2 миллионов копий в Европе.</p>
+            <ol class="event__ol">
+               <li class="event__ol-li">Your Love Is King</li>
+               <li class="event__ol-li">Hang On To Your Love</li>
+               <li class="event__ol-li">Smooth Operator</li>
+               <li class="event__ol-li">Jezebel</li>
+               <li class="event__ol-li">The Sweetest Taboo</li>
+               <li class="event__ol-li">Is It A Crime</li>
+               <li class="event__ol-li">Never As Good As The First Time</li>
+               <li class="event__ol-li">Love Is Stronger Than Pride</li>
+               <li class="event__ol-li">Paradise</li>
+            </ol>
+         </div>
 
          <form class="reserve event__reserve">
             <div class="reserve__checks">
-               Чекбоксы
+               <h2 class="event__text-title event__text-title--mb30 event__text-title--reserve">Забронировать столик</h2>
+               <ul class="reserve__checks-ul">
+                  @@loop('blocks/event-check.html', [
+                  {
+                  "text": "1 стол",
+                  "classMark": "check__mark--red",
+                  "classLabel": "check__label--red",
+                  "check": ""
+                  },
+                  {
+                  "text": "2 стол",
+                  "check": ""
+                  },
+                  {
+                  "text": "3 стол",
+                  "check": ""
+                  },
+                  {
+                  "text": "4 стол",
+                  "classMark": "check__mark--red",
+                  "classLabel": "check__label--red",
+                  "check": ""
+                  },
+                  {
+                  "text": "5 стол",
+                  "check": ""
+                  },
+                  {
+                  "text": "6 стол",
+                  "check": ""
+                  },
+                  {
+                  "text": "7 стол",
+                  "classMark": "check__mark--red",
+                  "classLabel": "check__label--red",
+                  "check": ""
+                  },
+                  {
+                  "text": "8 стол",
+                  "classMark": "check__mark--red",
+                  "classLabel": "check__label--red",
+                  "check": ""
+                  },
+                  {
+                  "text": "9 стол",
+                  "classMark": "check__mark--red",
+                  "classLabel": "check__label--red",
+                  "check": ""
+                  },
+                  {
+                  "text": "10 стол",
+                  "check": ""
+                  },
+                  {
+                  "text": "11 стол",
+                  "check": ""
+                  }
+                  ])
+               </ul>
             </div>
             <div class="reserve__scheme">
-               Схема столов
+               <h2 class="event__text-title event__text-title--mb40 event__text-title--bcg-black event__text-title--white event__text-title--fs16">Сцена</h2>               
+               <div class="reserve__scheme-location">
+
+                  <div class="reserve__scheme-item reserve__scheme-item--table-10">
+                     <svg class="reserve__scheme-svg--table-10 reserve__scheme-svg--bcg-black">
+                        <use xlink:href="assets/icons/symbols.svg#table_10"></use>
+                     </svg>
+                  </div>
+
+                  <div class="reserve__scheme-item reserve__scheme-item--table-9">
+                     <svg class="reserve__scheme-svg--table-9 reserve__scheme-svg--red">
+                        <use xlink:href="assets/icons/symbols.svg#table_9"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--dance-floor">
+                     <svg class="reserve__scheme-svg--dance-floor reserve__scheme-svg--bcg-black">
+                        <use xlink:href="assets/icons/symbols.svg#dance_floor"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-1">
+                     <svg class="reserve__scheme-svg--table-1 reserve__scheme-svg--bcg-red">
+                        <use xlink:href="assets/icons/symbols.svg#table_1"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-2">
+                     <svg class="reserve__scheme-svg--table-2 reserve__scheme-svg--black">
+                        <use xlink:href="assets/icons/symbols.svg#table_2"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-11">
+                     <svg class="reserve__scheme-svg--table-11 reserve__scheme-svg--black">
+                        <use xlink:href="assets/icons/symbols.svg#table_11"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-8">
+                     <svg class="reserve__scheme-svg--table-8 reserve__scheme--red">
+                        <use xlink:href="assets/icons/symbols.svg#table_8"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-7">
+                     <svg class="reserve__scheme-svg--table-7 reserve__scheme-svg--red">
+                        <use xlink:href="assets/icons/symbols.svg#table_7"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-4">
+                     <svg class="reserve__scheme-svg--table-4 reserve__scheme-svg--red">
+                        <use xlink:href="assets/icons/symbols.svg#table_4"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-3">
+                     <svg class="reserve__scheme-svg--table-3 reserve__scheme-svg--black">
+                        <use xlink:href="assets/icons/symbols.svg#table_3"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-6">
+                     <svg class="reserve__scheme-svg--table-6 reserve__scheme-svg--black">
+                        <use xlink:href="assets/icons/symbols.svg#table_6"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__scheme-item reserve__scheme-item--table-5">
+                     <svg class="reserve__scheme-svg--table-5 reserve__scheme-svg--gray">
+                        <use xlink:href="assets/icons/symbols.svg#table_5"></use>
+                     </svg>
+                  </div>
+               </div>
             </div>
             <div class="reserve__order">
-               Оформление заказа
+               <h2 class="event__text-title event__text-title--mb20 event__text-title--reserve">Ваши пригласительные билеты</h2>
+               <div class="reserve__order-pay">
+                  <div class="reserve__order-summary">
+                     <div class="reserve__order-quantity">
+                        <div class="reserve__order-count">9 шт.</div>
+                        <div class="reserve__order-price">1400</div>
+                     </div>
+                     <div class="reserve__order-subtotal">12 600 ₽</div>
+                  </div>
+                  <div class="reserve__order-summary">
+                     <div class="reserve__order-quantity">
+                        <div class="reserve__order-count">4 шт.</div>
+                        <div class="reserve__order-price">1250</div>
+                     </div>
+                     <div class="reserve__order-subtotal">5 000 ₽</div>
+                  </div>
+               </div>
+               <div class="reserve__order-total">
+                  <div class="reserve__order-total-text">Сумма</div>
+                  <div class="reserve__order-total-amount">17 600</div>
+               </div>
+               <button type="submit" class="btn btn--red btn--reserve reserve__order-btn">Купить билеты</button>
+               
             </div>
             <div class="reserve__legend">
-               Легенда
+               <h2 class="event__text-title event__text-title--mb20 event__text-title--reserve">Стоимость пригласительного билета</h2>
+               <div class="reserve__legend-block reserve__legend-block--red">
+                  <div class="reserve__legend-price">1400 ₽</div>
+                  <div class="reserve__legend-count">1 персона</div>
+               </div>
+               <div class="reserve__legend-block">
+                  <div class="reserve__legend-price">1250 ₽</div>
+                  <div class="reserve__legend-count">1 персона</div>
+               </div>
+               <h3 class="event__text-title event__text-title--mb20 event__text-title--mt37">Примечание</h3>
+               <div class="reserve__legend-note">
+                  <div class="reserve__legend-note-svg">
+                     <svg class="reserve__legend-rings" width="36" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#rings"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__legend-note-text">доступные места</div>
+               </div>
+               <div class="reserve__legend-note">
+                  <div class="reserve__legend-note-svg">
+                     <svg class="reserve__legend-circle" width="36" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#circle_grey"></use>
+                     </svg>
+                  </div>
+                  <div class="reserve__legend-note-text">забронировано</div>
+               </div>
             </div>
          </form>
       </article>

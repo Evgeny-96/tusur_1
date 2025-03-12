@@ -1,0 +1,35 @@
+.breadcrumbs {
+   margin-top: 40px;
+
+   @media @bw450 {
+      display: none;
+   }
+
+   &__ul {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      .container();
+   }
+
+   &__li {
+      list-style-type: none;
+      font-size: 16px;
+
+      @media @bw1020 {
+         font-size: 14px;
+      }
+
+      &:not(:last-child)::after {
+         content: "/";
+         margin-left: 3px;
+         margin-right: 5px;
+         padding: 0;
+      }
+   }
+
+   &__link {
+      margin: 0;
+      padding: 0;
+   }
+}

@@ -8,20 +8,54 @@
    @@include('blocks/page-header.html')
 
    <main class="main">
-      <!-- Здесь будут хлебные крошки -->
+      <div class="breadcrumbs">
+         <ul class="breadcrumbs__ul">
+            @@loop('blocks/breadcrumbs-li.html', [
+            {
+            "link": "#",
+            "class": "breadcrumbs",
+            "text": "Главная"
+            },
+            {
+            "link": "#",
+            "class": "breadcrumbs",
+            "text": "Мероприятия"
+            }
+            ])
+         </ul>
+      </div>
       <div class="events">
          <section class="listing events__listing">
-            <h2 class="listing__title section-title">Мероприятия</h2>
+            <h1 class="listing__title section-title">Мероприятия</h1>
             @@include('blocks/event-listing.html')
+            <div class="listing__show">
+               <a href="#" class="listing__link-all">Показать ещё
+                  <svg class="listing__arrow" width="60" height="91">
+                     <use xlink:href="assets/icons/symbols.svg#arrow_down"></use>
+                  </svg>
+               </a>
+            </div>
          </section>
-         <section class="listing events__listing">
-            <h2 class="listing__title section-title">Блог</h2>
-            @@include('blocks/blog-listing.html')
-            <a href="#" class="listing__link link">Смотреть все</a>
-         </section>
-         <!-- Здесь будут дополнительные услуги -->
       </div>
-      @@include('blocks/event-table.html')
+      <div class="services">
+         <section class="services__table">
+            <h2 class="section-title">Дополнительные услуги</h2>
+            <p class="">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+            @@include('blocks/event-table.html')
+         </section>
+      </div>
+      <div class="want">
+         <section class="want__events">
+            <div class="space__wish want__events-wish">
+               <p class="space__wish-p">Я хочу</p>
+               <div class="space__btn">
+                  <button type="submit" class="btn btn--red">Провести мероприятие</button>
+                  <button type="submit" class="btn btn--white">Стать арендатором</button>
+               </div>
+            </div>
+            @@include('blocks/event-want.html')
+         </section>
+      </div>
    </main>
    @@include('blocks/page-footer.html')
    @@include('blocks/event-pp.html')

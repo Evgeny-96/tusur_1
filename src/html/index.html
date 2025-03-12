@@ -11,32 +11,23 @@
       <div class="home">
          @@include('blocks/space.html')
          @@include('blocks/about.html')
-         <section class="home__listing listing events__listing">
-            <h2 class="listing__title section-title">Мероприятия</h2>
-            @@include('blocks/event-listing.html')
-            <div class="home__pagination">
-               <button type="button" class="arrow home__arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                     <use xlink:href="assets/icons/symbols.svg#arrow_prev"></use>
-                  </svg>
-               </button>
-               <div class="home__dot"></div>
-               <div class="home__dot"></div>
-               <div class="home__dot active"></div>
-               <div class="home__dot"></div>
-               <div class="home__dot"></div>
-               <button type="button" class="arrow home__arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                     <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-               </button>
+         <section class="home__listing">
+            <div class="listing events__listing">
+               <h2 class="listing__title section-title">Мероприятия</h2>
+               @@include('blocks/event-listing.html')
+               @@include('blocks/pagination.html')
+               <a href="#" class="home__all">Смотреть всё</a>
             </div>
-            <a href="#" class="home__all">Смотреть всё</a>
          </section>
          <section class="home__blog listing events__listing">
             <h2 class="listing__title section-title">Блог</h2>
             @@include('blocks/blog-listing.html')
             <a href="#" class="listing__link link">Смотреть все</a>
+         </section>
+         <section class="home__contacts listing events__listing contacts">
+            <h2 class="listing__title section-title">Контакты</h2>
+            @@include('blocks/contacts.html')
+            <p class="contacts__quote">Просто делайте, что нравится, а мы вам поможем</p>
          </section>
       </div>
    </main>

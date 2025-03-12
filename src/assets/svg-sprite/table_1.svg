@@ -1,0 +1,9 @@
+<svg viewBox="0 0 111 83" fill="none" xmlns="http://www.w3.org/2000/svg" class="reserve__scheme-item--bcg-1">
+<rect y="27" width="84" height="29" fill="currentColor"/>
+<path d="M45.1992 48H41.2832V40.4414C41.2832 39.5234 41.3027 38.6836 41.3418 37.9219C41.1009 38.2148 40.8014 38.5208 40.4434 38.8398L38.8223 40.1777L36.8203 37.7168L41.7227 33.7227H45.1992V48Z" fill="white"/>
+<circle cx="20" cy="12" r="12" fill="currentColor"/>
+<circle cx="63" cy="12" r="12" fill="currentColor"/>
+<circle cx="99" cy="40" r="12" fill="currentColor"/>
+<circle cx="63" cy="71" r="12" fill="currentColor"/>
+<circle cx="20" cy="71" r="12" fill="currentColor"/>
+</svg>

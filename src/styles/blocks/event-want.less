@@ -1,0 +1,95 @@
+.want {
+   margin-bottom: 150px;
+
+   @media @bw1020 {
+      margin-bottom: 100px;
+   }
+
+   &__events {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      .container();
+   }
+
+   &__contacts {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 64px;
+
+      @media @bw1020 {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
+      @media @bw768 {
+         margin-top: 90px;
+      }
+   }
+
+   &__place {
+      width: calc(100%/3);
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media @bw1020 {
+         &:not(:last-child) {
+            margin-bottom: 50px;
+         }
+      }
+
+      @media @bw600 {
+         width: 100%;
+      }
+
+      &-addr {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &-title {
+         font-size: 20px;
+         margin-top: 40px;
+         font-weight: 600;
+         margin-bottom: 10px;
+
+         @media @bw1020 {
+            font-size: 18px;
+            margin-bottom: 16px;
+         }
+
+         @media @bw600 {
+            font-size: 14px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+         }
+      }
+
+      &-text,
+      &-tel,
+      &-mail {
+         font-size: 16px;
+         font-weight: 400;
+         text-align: center;
+         margin: 0;
+
+
+         @media @bw1020 {
+            font-size: 14px;
+         }
+
+         @media @bw600 {
+            font-size: 13px;
+         }
+      }
+   }
+
+   &__events-wish {
+      margin-top: 50px;
+   }
+}
