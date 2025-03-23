@@ -127,12 +127,47 @@
       }
    }
 
-   &__picture {
+   &__map {
+      width: 752px;
       max-width: 752px;
+      height: 454px;
+      max-height: 454px;
 
       @media @bw1020 {
-         min-width: inherit;
-         width: 100%;
+         width: 708px;
+         max-width: 708px;
+         height: 463px;
+         max-height: 463px;
+      }
+
+      @media @bw768 {
+         width: 580px;
+         height: 346px;
+      }
+
+      @media @bw600 {
+         width: 430px;
+         height: 258px;
+      }
+
+      @media @bw450 {
+         width: 280px;
+         height: 186px;
+      }
+
+      &-svg {
+         width: 91px;
+         height: 71px;
+
+         @media @bw768 {
+            width: 71px;
+            height: 51px;
+         }
+
+         @media @bw450 {
+            width: 61px;
+            height: 41px;
+         }
       }
    }
 

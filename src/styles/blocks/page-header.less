@@ -222,7 +222,8 @@
          height: 2px;
          border-radius: 2px;
          background-color: @black;
-         // transform-origin: 50% 50%;
+         transform-origin: 50% 50%;
+         transition: transform 0.4s, box-shadow 0.4s;
       }
 
       &::before {
@@ -264,6 +265,31 @@
    .page-header {
       background-color: rgba(222, 222, 222, 0.5);
       backdrop-filter: blur(20px);
+   }
+}
+
+.show-nav {
+   body {
+      @media @bw1020 {
+         overflow: hidden;
+      }
+   }
+
+   .page-header__nav {
+      @media @bw1020 {
+         transform: translateX(0);
+      }
+   }
+
+   .page-header__nav-toggle {
+      &::before {
+         transform: translate(0px, 6px) rotate(45deg);
+         box-shadow: none;
+      }
+
+      &::after {
+         transform: translate(0px, -6px) rotate(-45deg);
+      }
    }
 }
 

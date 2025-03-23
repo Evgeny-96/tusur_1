@@ -9,7 +9,7 @@
    @media @bw768 {
       margin-bottom: 50px;
    }
-   
+
    &__stripe {
       display: flex;
       flex-direction: row;
@@ -120,20 +120,27 @@
          flex-direction: row;
          justify-content: space-between;
          margin-bottom: 15px;
+         flex-wrap: wrap;
 
          @media @bw450 {
             justify-content: flex-start;
          }
+
+         span.error {
+            color: @red;
+            order: 1;
+            margin-top: 5px;
+         }
       }
 
       &-input {
-         width: 275px;
+         width: 247px;
          border: 0;
          padding: 15px 0 15px 28px;
 
          @media @bw450 {
             padding: 17px 0 17px 20px;
-            width: 204px;
+            width: 140px;
          }
       }
 

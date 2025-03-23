@@ -5,10 +5,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+  <script src="https://api-maps.yandex.ru/v3/?apikey=26927e5a-d1a5-4328-90a9-b35c720cc653&lang=ru_RU"></script>
+  <script type="text/javascript" src="/scripts/map.min.js"></script>
+
 </head>
 
 <body class="body">
@@ -44,7 +63,7 @@
             <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" id="js-navToggle" class="page-header__nav-toggle"></button>
       </div>
     </div>
 
@@ -100,9 +119,9 @@
 
         <div class="footer__form">
           <p class="footer__form-text">Подпишись и будь в курсе происходящего</p>
-          <form action="/" class="footer__form-form">
+          <form action="https://jsonplaceholder.typicode.com/posts" class="footer__form-form" id="js-subscription">
             <div class="footer__form-bl">
-              <input class="footer__form-input" type="email" placeholder="Email">
+              <input class="footer__form-input" id="js-subscribeEmail" type="email" placeholder="Email" required>
               <button type="submit" class="footer__form-submit">Отправить</button>
             </div>
 
@@ -147,6 +166,15 @@
       </div>
     </div>
   </footer>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key="></script> -->
+  <script type="text/javascript" src="/scripts/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.selectric.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="/scripts/air-datepicker.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate-init.js"></script>
+  <script type="text/javascript" src="/scripts/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/scripts/main.min.js"></script>
 </body>
 
 </html>

@@ -97,6 +97,13 @@ textarea:focus {
   display: flex;
   flex-direction: column;
 
+  label.error,
+  span.error {
+    display: block;
+    margin: 5px 0 0;
+    color: @red;
+  }
+
   &__title {
     display: block;
     margin: 0 0 10px;
@@ -145,11 +152,22 @@ textarea:focus {
     }
   }
 
+  &__date {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+
   &__date-inputs {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
-    max-width: 251px;
     height: 55px;
+    pointer-events: none;
   }
 
   &__date-input {
@@ -165,11 +183,28 @@ textarea:focus {
     font-size: 16px;
     line-height: 1.375;
     text-align: center;
+    pointer-events: none;
+
+    @media @bw400 {
+      font-size: 14px;
+    }
 
     &--year {
       flex-grow: 1;
       margin-right: 0;
     }
+  }
+
+  &__date-picker {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    cursor: pointer;
   }
 
 }
@@ -242,6 +277,14 @@ textarea:focus {
   color: @black;
   cursor: pointer;
 
+  span.error {
+    display: block;
+    color: @red;
+    order: 1;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+
   &__input {
     .is-hidden();
 
@@ -290,6 +333,10 @@ textarea:focus {
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+
+    @media @bw450 {
+      font-size: 12px;
+    }
 
     &--s {
       font-size: 14px;
@@ -507,6 +554,16 @@ textarea:focus {
     }
   }
 
+}
+
+.show-event-popup {
+  body {
+    overflow: hidden;
+  }
+
+  #js-eventPP {
+    display: flex;
+  }
 }
 
 button {
