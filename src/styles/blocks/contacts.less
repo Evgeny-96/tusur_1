@@ -25,10 +25,13 @@
    &__places {
       display: flex;
       flex-direction: column;
+      padding: 15px 0;
+      justify-content: space-between;
 
       @media @bw1020 {
          flex-direction: row;
          margin-top: 100px;
+         padding: 0;
       }
 
       @media @bw768 {
@@ -51,16 +54,16 @@
       @media @bw768 {
          flex-direction: row;
 
-         &:not(:first-child) {
-            margin-top: 40px;
-         }
+         // &:not(:first-child) {
+         //    margin-top: 40px;
+         // }
       }
 
       &:not(:last-child) {
-         margin-bottom: 67px;
+         // margin-bottom: 67px;
 
          @media @bw1020 {
-            margin-bottom: inherit;
+            // margin-bottom: inherit;
             margin-right: 60px;
          }
 

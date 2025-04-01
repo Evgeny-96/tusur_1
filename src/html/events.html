@@ -9,7 +9,7 @@
 
    <main class="main">
       <div class="breadcrumbs">
-         <ul class="breadcrumbs__ul">
+         <div class="breadcrumbs__list">
             @@loop('blocks/breadcrumbs-li.html', [
             {
             "link": "#",
@@ -22,7 +22,7 @@
             "text": "Мероприятия"
             }
             ])
-         </ul>
+         </div>
       </div>
       <div class="events">
          <section class="listing events__listing">
@@ -49,8 +49,8 @@
             <div class="space__wish want__events-wish">
                <p class="space__wish-p">Я хочу</p>
                <div class="space__btn">
-                  <button type="submit" class="btn btn--red">Провести мероприятие</button>
-                  <button type="submit" class="btn btn--white">Стать арендатором</button>
+                  <button type="button" class="btn btn--red">Провести мероприятие</button>
+                  <button type="button" class="btn btn--white">Стать арендатором</button>
                </div>
             </div>
             @@include('blocks/event-want.html')

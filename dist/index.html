@@ -75,7 +75,7 @@
       <section class="space">
         <h1 class="space__h1">Арт - пространство</h1>
         <div class="space__title">
-          <svg>
+          <svg class="space__title-svg">
             <use xlink:href="assets/icons/symbols.svg#lenni"></use>
           </svg>
         </div>
@@ -84,8 +84,8 @@
         <div class="space__wish">
           <p class="space__wish-p">Я хочу</p>
           <div class="space__btn">
-            <button type="submit" id="js-eventOpenBtn" class="btn btn--red">Провести мероприятие</button>
-            <button type="submit" class="btn btn--white">Стать арендатором</button>
+            <button type="button" id="js-eventOpenBtn" class="btn btn--red">Провести мероприятие</button>
+            <button type="button" class="btn btn--white">Стать арендатором</button>
           </div>
         </div>
       </section>
@@ -93,7 +93,7 @@
         <h2 class="section-title">О нас</h2>
         <div class="about__block">
           <h3 class="about__title">Проект «Millennials»</h3>
-          <p class="about__content about__content-grid">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
+          <p class="about__content">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
             желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их
             мечту в реальность.</p>
           <picture class="about__picture">
@@ -113,7 +113,7 @@
             <img src="assets/images/about/matheus.jpg" alt="sebastiaan" class="about__img" />
           </picture>
           <h3 class="about__title">Мы предоставляем площади для вашего мероприятия</h3>
-          <p class="about__content about__content-grid">И оказываем помощь с организацией, если вам это нужно.
+          <p class="about__content">И оказываем помощь с организацией, если вам это нужно.
             <br />Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
           </p>
           <picture class="about__picture">
@@ -127,7 +127,7 @@
           <div class="about__look">
             <p class="about__look-content">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
             <a href="#" class="about__link">
-              <p class="about__link-text">Смотреть</p>
+              <span class="about__link-text">Смотреть</span>
               <!-- <button type="button" class="arrow"> -->
               <div class="arrow">
                 <svg class="arrow__icon" width="92" height="60">
@@ -272,116 +272,6 @@
           <!-- </div> -->
         </div>
       </section>
-      <!-- <section class="home__listing">
-            <div class="listing events__listing">
-               <h2 class="listing__title section-title">Мероприятия</h2>
-               <div class="listing__events-list">
-   <article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/nirvana_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
-         <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana</h3>
-      <p class="event-card__description">Это третий альбом группы...</p>
-      <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
-   </a>
-</article><article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/stuff_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/stuff.webp" />
-         <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
-      <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
-      <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
-   </a>
-</article><article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/sade_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/sade_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/sade_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/sade_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/sade.webp" />
-         <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Вечер | The Best of Sade</h3>
-      <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-      <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
-   </a>
-</article><article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/exhibition_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/exhibition_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/exhibition_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/exhibition_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/exhibition.webp" />
-         <img src="assets/images/events/exhibition.jpg" alt="exhibition" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Выставка Малевича в Томске</h3>
-      <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
-      <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</time>
-   </a>
-</article><article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/mater-class_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/mater-class_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/mater-class_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/mater-class_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/mater-class.webp" />
-         <img src="assets/images/events/mater-class.jpg" alt="mater-class" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h3>
-      <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
-      <time datetime="2022-12-25T13:00" class="event-card__time">25.12.2022 | начало 13.00</time>
-   </a>
-</article><article class="event-card listing__event-card">
-   <a href="#" class="event-card__link">
-      <picture class="event-card__picture">
-         <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/hatters_mob.webp" />
-         <source media="(max-width: 450px)" srcset="assets/images/events/hatters_mob.jpg" />
-         <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/hatters_tablet.webp" />
-         <source media="(max-width: 1169px)" srcset="assets/images/events/hatters_tablet.jpg" />
-         <source type="image/webp" srcset="assets/images/events/hatters.webp" />
-         <img src="assets/images/events/hatters.jpg" alt="hatters" class="event-card__img" />
-      </picture>
-      <h3 class="event-card__title">Повесилимся на славу на концерте The Hatters</h3>
-      <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко</p>
-      <time datetime="2022-12-27T10:00" class="event-card__time">27.12.2022 | начало 10.00</time>
-   </a>
-</article>
-</div>
-               <div class="pagination">
-   <button type="button" class="arrow pagination__prev">
-      <svg class="arrow__icon" width="92" height="62">
-         <use xlink:href="assets/icons/symbols.svg#arrow_prev"></use>
-      </svg>
-   </button>
-   <div class="pagination__dot"></div>
-   <div class="pagination__dot"></div>
-   <div class="pagination__dot active"></div>
-   <div class="pagination__dot"></div>
-   <div class="pagination__dot"></div>
-   <button type="button" class="arrow pagination__next">
-      <svg class="arrow__icon" width="92" height="62">
-         <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-      </svg>
-   </button>
-</div>
-               <a href="#" class="home__all">Смотреть всё</a>
-            </div>
-         </section> -->
       <section class="home__blog listing events__listing">
         <h2 class="listing__title section-title">Блог</h2>
         <div class="listing__article-list">
@@ -523,13 +413,13 @@
 
       <div class="footer__block">
 
-        <nav class="footer__menu">
+        <div class="footer__menu">
           <a href="" class="footer__menu-link">Календарь мероприятий</a>
           <a href="" class="footer__menu-link">Провести мероприятие</a>
           <a href="" class="footer__menu-link">Стать арендатором</a>
           <a href="" class="footer__menu-link">Наши проекты</a>
           <a href="" class="footer__menu-link">Контакты</a>
-        </nav>
+        </div>
 
         <div class="footer__form">
           <p class="footer__form-text">Подпишись и будь в курсе происходящего</p>
@@ -572,10 +462,12 @@
           </a>
         </div>
         <div class="footer__copyright-promotion">
-          <a href="" class="footer__copyright-promotion-link">Создание и продвижение</a>
-          <svg class="footer__copyright-promotion-svg">
-            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-          </svg>
+          <p href="" class="footer__copyright-promotion-text">Создание и продвижение</p>
+          <a href="" class="footer__copyright-promotion-link">
+            <svg class="footer__copyright-promotion-svg">
+              <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

@@ -72,14 +72,10 @@
 
   <main class="main">
     <div class="breadcrumbs">
-      <ul class="breadcrumbs__ul">
-        <li class="breadcrumbs__li">
-          <a href="#" class="breadcrumbs_link">Главная</a>
-        </li>
-        <li class="breadcrumbs__li">
-          <a href="#" class="breadcrumbs_link">Мероприятия</a>
-        </li>
-      </ul>
+      <div class="breadcrumbs__list">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Мероприятия</a>
+      </div>
     </div>
     <div class="events">
       <section class="listing events__listing">
@@ -321,8 +317,8 @@
         <div class="space__wish want__events-wish">
           <p class="space__wish-p">Я хочу</p>
           <div class="space__btn">
-            <button type="submit" class="btn btn--red">Провести мероприятие</button>
-            <button type="submit" class="btn btn--white">Стать арендатором</button>
+            <button type="button" class="btn btn--red">Провести мероприятие</button>
+            <button type="button" class="btn btn--white">Стать арендатором</button>
           </div>
         </div>
         <div class="want__contacts">
@@ -375,13 +371,13 @@
 
       <div class="footer__block">
 
-        <nav class="footer__menu">
+        <div class="footer__menu">
           <a href="" class="footer__menu-link">Календарь мероприятий</a>
           <a href="" class="footer__menu-link">Провести мероприятие</a>
           <a href="" class="footer__menu-link">Стать арендатором</a>
           <a href="" class="footer__menu-link">Наши проекты</a>
           <a href="" class="footer__menu-link">Контакты</a>
-        </nav>
+        </div>
 
         <div class="footer__form">
           <p class="footer__form-text">Подпишись и будь в курсе происходящего</p>
@@ -424,10 +420,12 @@
           </a>
         </div>
         <div class="footer__copyright-promotion">
-          <a href="" class="footer__copyright-promotion-link">Создание и продвижение</a>
-          <svg class="footer__copyright-promotion-svg">
-            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-          </svg>
+          <p href="" class="footer__copyright-promotion-text">Создание и продвижение</p>
+          <a href="" class="footer__copyright-promotion-link">
+            <svg class="footer__copyright-promotion-svg">
+              <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
