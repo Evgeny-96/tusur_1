@@ -1,0 +1,72 @@
+<div class="catalog__content-sidebar-block">
+   <button type="button" class="btn catalog__content-sidebar-toggle js-filterToggle">Фильтр</button>
+   <form name="filter" class="catalog__content-sidebar sidebar monts">
+      <div class="catalog__content-right-block">
+         <button type="button" class="catalog__content-sidebar-close js-filterToggle"></button>
+      </div>
+      <div class="sidebar__mob">
+         <div class="sidebar__mob-title mon">Фильтр</div>
+         <button type="button" class="btn__reset">Сбросить</button>
+      </div>
+      <div class="sidebar__title">Коллекция</div>
+      <div class="sidebar__content">
+         @@loop('catalog-sidebar-check.html', [
+         {
+         "text": "1982 года"
+         },
+         {
+         "text": "1986 года"
+         },
+         {
+         "text": "1987 года"
+         },
+         {
+         "text": "1988 года"
+         },
+         {
+         "text": "1989 года"
+         }
+         ])
+      </div>
+      <div class="sidebar__title">Наличие</div>
+      <div class="sidebar__content">
+         @@loop('catalog-sidebar-radio.html', [
+         {
+         "text": "В наличие",
+         "checked": "checked"
+         },
+         {
+         "text": "Под заказ",
+         "checked": ""
+         },
+         {
+         "text": "Всё",
+         "checked": ""
+         }
+         ])
+      </div>
+      <div class="sidebar__title">Ориентация</div>
+      <div class="sidebar__content">
+         @@loop('catalog-sidebar-check.html', [
+         {
+         "text": "Книжная"
+         },
+         {
+         "text": "Альбомная"
+         }
+         ])
+      </div>
+      <div class="sidebar__title">Цена</div>
+      <div class="sidebar__content">
+         <div class="sidebar__content-price box">
+            <div class="slider" data-value-0="#first" data-value-1="#second" data-range="#third"></div>
+            <div class="values">
+               <div>от <span id="first"></span></div>
+               <div>до <span id="second"></span></div>
+            </div>
+         </div>
+      </div>
+      <button type="submit" class="btn catalog__content-btn">Применить</button>
+   </form>
+   <button type="button" class="btn__reset btn__reset-bottom">Сбросить</button>
+</div>

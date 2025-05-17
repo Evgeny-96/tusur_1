@@ -1,0 +1,66 @@
+<div class="poster-card">
+   <div class="poster-card__container">
+      <div class="poster-card__tablet">
+         <h1 class="poster-card__title title">Постер Andy Mouse | 60-60 см</h1>
+         <span class="gallery__card-link poster-card__btn-favourites">
+            <svg class="gallery__card-svg" width="24" height="24">
+               <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+            </svg>
+         </span>
+      </div>
+      <div class="poster-card__card">
+         <a href="assets/images/poster/image-1.jpg" data-fancybox class="poster-card__image-link">
+            <picture class="poster-card__image-picture">
+               <source media="(max-width: 500px)" type="image/webp" srcset="assets/images/poster/image-1-mob.webp" />
+               <source media="(max-width: 500px)" srcset="assets/images/poster/image-1-mob.jpg" />
+               <source media="(max-width: 1019px)" type="image/webp" srcset="assets/images/poster/image-1-tablet.webp" />
+               <source media="(max-width: 1019px)" srcset="assets/images/poster/image-1-tablet.jpg" />
+               <source type="image/webp" srcset="assets/images/poster/image-1.webp" />
+               <img src="assets/images/poster/image-1.jpg" alt="image-1" class="poster-card__image-img" />
+            </picture>
+         </a>
+         <div class="poster-card__desc">
+            <h1 class="poster-card__title title">Постер Andy Mouse | 60-60 см</h1>
+            <div class="poster-card__price">1 850 ₽</div>
+            <form action="/" class="poster-card__form">
+               <div class="poster-card__radio">
+                  @@loop('catalog-sidebar-radio.html', [
+                  {
+                  "text": "Бумажный постер",
+                  "checked": "checked"
+                  },
+                  {
+                  "text": "Электронный постер",
+                  "checked": ""
+                  }
+                  ])
+               </div>
+               <div class="poster-card__number">
+                  <p class="poster-card__number-text">Количество</p>
+                  <div class="poster-card__number-btn">
+                     <button class="poster-card__number-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">-</button>
+                     <input type="number" min="1" value="1" readonly class="poster-card__number-btn-input">
+                     <button class="poster-card__number-btn-plus" type="button" onclick="this.previousElementSibling.stepUp();">+</button>
+                  </div>
+               </div>
+               <div class="poster-card__btn">
+                  <button type="submit" class="btn poster-card__btn-submit">Добавить в корзину</button>
+                  <span class="gallery__card-link poster-card__btn-favourites">
+                     <svg class="gallery__card-svg" width="24" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+                     </svg>
+                  </span>
+               </div>
+            </form>
+            <div class="poster-card__delivery">
+               <div class="poster-card__delivery-icon">
+                  <svg class="gallery__card-svg" width="24" height="24">
+                     <use xlink:href="assets/icons/symbols.svg#delivery"></use>
+                  </svg>
+               </div>
+               <div class="poster-card__delivery-text">Бесплатная доставка</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

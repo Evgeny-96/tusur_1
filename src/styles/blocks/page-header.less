@@ -3,73 +3,66 @@
    top: 0;
    left: 0;
    width: 100%;
-   height: 147px;
+   height: 105px;
    display: flex;
    align-items: center;
-   background-color: rgba(222, 222, 222, 0.98);
-   backdrop-filter: blur(20px);
    z-index: 100;
+   background-color: @gray;
 
-   @media @bw1660 {
-      height: 111px;
+   @media @bw1020 {
+      height: 75px;
    }
 
-   @media @bw768 {
-      height: 70px;
-   }
-
-   &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: fade(@gray, 98%);
-
-      @supports (backdrop-filter: blur(20px)) {
-         background-color: fade(@gray, 70%);
-         backdrop-filter: blur(20px);
-      }
+   &:hover {
+      box-shadow: 0px 0px 50px 0px @shadow_hover;
    }
 
    &__container {
       .container;
       position: relative;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       z-index: 1;
    }
 
-   &__logo {
-      flex-shrink: 0;
-      width: 202px;
-      height: 147px;
-      font-size: 0;
-      text-decoration: none;
+   &__catalog {
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
 
-      @media @bw1660 {
-         width: 152px;
-         height: 111px;
+      &:hover {
+         color: @soft_blue;
       }
 
-      @media @bw768 {
-         width: 96px;
-         height: 70px;
+      &-icon {
+         margin-right: 15px;
+
+         &:hover {
+            color: @soft_blue;
+         }
+      }
+
+      &-text {
+         @media @bw768 {
+            display: none;
+         }
       }
    }
 
-   &__logo-icon {
-      width: 100%;
-      height: 100%;
+   &__logo {
+      width: 74px;
+      height: 80px;
+
+      @media @bw1020 {
+         width: 55px;
+         height: 59px;
+      }
    }
 
    &__nav {
-      box-sizing: border-box;
       display: flex;
-      align-items: baseline;
-      margin: 0 auto;
+      flex-direction: row;
 
       @media @bw1020 {
          position: absolute;
@@ -79,116 +72,90 @@
          height: 100vh;
          flex-direction: column;
          align-items: flex-start;
-         padding: 211px 30px 30px;
+         padding: 70px 30px 30px;
+         margin-top: 75px;
          background-color: fade(@gray, 98%);
          transition: transform 0.4s;
-         /*
-      закончив верстку шапки,
-      раскомментируем следующее свойство,
-      чтобы скрыть наше меню:*/
          transform: translateX(-100%);
          overflow-x: hidden;
          overflow-y: auto;
-
-         @supports (backdrop-filter: blur(20px)) {
-            background-color: fade(@gray, 70%);
-            backdrop-filter: blur(20px);
-         }
+         background-color: @gray;
       }
 
       @media @bw768 {
-         padding: 150px 20px 30px;
+         margin-top: 65px;
+         padding-top: 60px;
       }
 
-   }
-
-   &__nav-link {
-      margin: 0 25px;
-      color: #1f1e1e;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 25px;
-      text-decoration: none;
-      transition: color 0.2s;
-
-      @media @bw1020 {
-         margin: 0 0 40px;
-         font-size: 16px;
-         line-height: 22px;
-      }
-   }
-
-   &__nav-link:hover {
-      color: #bc3324;
-   }
-
-   &__right-block {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 202px;
-
-      @media @bw1660 {
-         width: 152px;
-      }
-
-      @media @bw1020 {
-         width: auto;
-         margin-left: auto;
-      }
-   }
-
-   &__user-btn {
-      max-width: 100%;
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 15px 40px;
-      border: 1px solid @black;
-      background-color: transparent;
-      outline: none;
-      color: @black;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      text-decoration: none;
-      transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-      overflow: hidden;
-      cursor: pointer;
-
-      @media @bw1020 {
-         display: flex;
-         width: 40px;
-         height: 40px;
-         padding: 0;
-         border: none;
-         background: none;
-         color: @black;
-         font-size: 0;
-      }
-
-      &:hover {
-         background-color: @black;
-         color: @white;
+      &-link:not(:last-child) {
+         margin-right: 50px;
 
          @media @bw1020 {
-            background: none;
-            color: @red;
+            margin-right: inherit;
+            margin-bottom: 32px;
+         }
+      }
+
+      &-link {
+         position: relative;
+
+         @media @bw1020 {
+            display: flex;
+            flex-direction: row;
+         }
+      }
+
+      &-col {
+         position: absolute;
+         top: -15px;
+         left: 25px;
+         font-size: 14px;
+         font-weight: 600;
+         display: none;
+      }
+
+      &-svg {
+         stroke: @black;
+         fill: transparent;
+
+         @media @bw1020 {
+            margin-right: 15px;
+         }
+
+         #stroke_black {
+            stroke: @black;
+         }
+
+         #fill_black {
+            fill: @black;
+         }
+
+         &.log-in {
+            display: none;
+         }
+      }
+
+      &-text {
+         display: none;
+
+         @media @bw1020 {
+            display: block;
+         }
+
+         @media @bw768 {
+            font-size: 14px;
          }
       }
    }
 
-   &__user-icon {
+   &__right-block {
       display: none;
-      color: @black;
-
-      &:hover {
-         color: @red_dark;
-      }
+      justify-content: flex-end;
+      align-items: center;
 
       @media @bw1020 {
-         display: block;
-         margin: auto;
+         display: flex;
+         width: auto;
       }
    }
 
@@ -222,7 +189,8 @@
          height: 2px;
          border-radius: 2px;
          background-color: @black;
-         // transform-origin: 50% 50%;
+         transform-origin: 50% 50%;
+         transition: transform 0.4s, box-shadow 0.4s;
       }
 
       &::before {
@@ -234,41 +202,48 @@
          top: 25px;
       }
    }
+}
 
-   &__nav-user {
-      display: none;
-
+.show-nav {
+   body {
       @media @bw1020 {
-         display: flex;
-         align-items: center;
-         margin-top: 20px;
+         overflow: hidden;
       }
    }
 
-   &__nav-user-link {
-      margin-right: 25px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 22px;
+   .page-header__nav {
+      @media @bw1020 {
+         transform: translateX(0);
+      }
    }
 
-   &__nav-logout {
-      width: 24px;
-      height: 24px;
-      font-size: 0;
-   }
+   .page-header__nav-toggle {
+      &::before {
+         transform: translate(0px, 6px) rotate(45deg);
+         box-shadow: none;
+      }
 
-}
-
-@supports (backdrop-filter: blur(20px)) {
-   .page-header {
-      background-color: rgba(222, 222, 222, 0.5);
-      backdrop-filter: blur(20px);
+      &::after {
+         transform: translate(0px, -6px) rotate(-45deg);
+      }
    }
 }
 
-// .page-header {
-//    &__nav {
-//       display: none;
-//    }
-// }
+.user {
+   .page-header__nav-svg {
+      stroke: @dark_blue;
+      fill: @dark_blue;
+
+      &.account {
+         display: none;
+      }
+
+      &.log-in {
+         display: block;
+      }
+   }
+
+   .page-header__nav-col {
+      display: block;
+   }
+}

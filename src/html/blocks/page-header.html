@@ -1,37 +1,42 @@
-<header class="page-header">
+<header class="page-header @@class">
    <div class="page-header__container">
-      <a href="#" class="page-header__logo">
-         <svg class="page-header__logo-icon" width="202" height="147">
-            <use xlink:href="assets/icons/symbols.svg#logo"></use>
+      <a href="/catalog.html" class="page-header__catalog">
+         <svg class="page-header__catalog-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#catalog"></use>
          </svg>
+         <div class="page-header__catalog-text">Каталог</div>
       </a>
-
+      <a href="/" class="page-header__logo">
+         <img src="assets/images/header/logo.png" alt="" class="page-header__logo-img">
+      </a>
       <nav class="page-header__nav">
-         <a href="#" class="page-header__nav-link">Мероприятия</a>
-         <a href="#" class="page-header__nav-link">Блог</a>
-         <a href="#" class="page-header__nav-link">О нас</a>
-         <a href="#" class="page-header__nav-link">Контакты</a>
-
-         <div class="page-header__nav-user">
-            <a href="#" class="page-header__nav-user-link">
-               Александр С.
-            </a>
-            <a href="#" class="page-header__nav-logout">
-               <svg class="page-header__nav-logout-icon" width="24" height="24">
-                  <use xlink:href="assets/icons/symbols.svg#door"></use>
-               </svg>
-            </a>
-         </div>
+         <a class="page-header__nav-link"  href="#">
+            <svg class="page-header__nav-svg" width="24" height="24">
+               <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+            </svg>
+            <div class="page-header__nav-col monts">3</div>
+            <div class="page-header__nav-text">Избранное</div>
+         </a>
+         <a class="page-header__nav-link" href="#">
+            <svg class="page-header__nav-svg" width="24" height="24">
+               <use xlink:href="assets/icons/symbols.svg#cart"></use>
+            </svg>
+            <div class="page-header__nav-col monts">10</div>
+            <div class="page-header__nav-text">Корзина</div>
+         </a>
+         <a class="page-header__nav-link" href="/login.html">
+            <svg class="page-header__nav-svg account" width="24" height="24">
+               <use xlink:href="assets/icons/symbols.svg#account"></use>
+            </svg>
+            <svg class="page-header__nav-svg log-in" width="24" height="24">
+               <use xlink:href="assets/icons/symbols.svg#log-in"></use>
+            </svg>
+            <div class="page-header__nav-text">Личный кабинет</div>
+         </a>
       </nav>
 
       <div class="page-header__right-block">
-         <a href="#" class="page-header__user-btn">Войти
-            <svg class="page-header__user-icon" width="21" height="18">
-               <use xlink:href="assets/icons/symbols.svg#user"></use>
-            </svg>
-         </a>
-         <button type="button" class="page-header__nav-toggle"></button>
+         <button type="button" id="js-navToggle" class="page-header__nav-toggle"></button>
       </div>
    </div>
-
 </header>

@@ -4,55 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Lenni Art</title>
+  <title>Кит Харинг</title>
+  <meta name="description" content="Постеры">
+  <meta name="keywords" content="Кит Харинг, постеры">
+
+  <!-- <meta property="og:title" content="Кит Харинг" />
+   <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+   <meta property="og:image" content="/assets/images/lenni-art.jpg">
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://lenni-art.ru/" /> -->
+
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+  <script src="https://api-maps.yandex.ru/v3/?apikey=26927e5a-d1a5-4328-90a9-b35c720cc653&lang=ru_RU"></script>
+  <script type="text/javascript" src="/scripts/map.min.js"></script>
+
 </head>
 
 <body class="body">
-  <header class="page-header">
+  <header class="page-header @@class">
     <div class="page-header__container">
-      <a href="#" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+      <a href="/catalog.html" class="page-header__catalog">
+        <svg class="page-header__catalog-icon" width="24" height="24">
+          <use xlink:href="assets/icons/symbols.svg#catalog"></use>
         </svg>
+        <div class="page-header__catalog-text">Каталог</div>
       </a>
-
+      <a href="/" class="page-header__logo">
+        <img src="assets/images/header/logo.png" alt="" class="page-header__logo-img">
+      </a>
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
-
-        <div class="page-header__nav-user">
-          <a href="#" class="page-header__nav-user-link">
-            Александр С.
-          </a>
-          <a href="#" class="page-header__nav-logout">
-            <svg class="page-header__nav-logout-icon" width="24" height="24">
-              <use xlink:href="assets/icons/symbols.svg#door"></use>
-            </svg>
-          </a>
-        </div>
+        <a class="page-header__nav-link" href="#">
+          <svg class="page-header__nav-svg" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+          </svg>
+          <div class="page-header__nav-col monts">3</div>
+          <div class="page-header__nav-text">Избранное</div>
+        </a>
+        <a class="page-header__nav-link" href="#">
+          <svg class="page-header__nav-svg" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#cart"></use>
+          </svg>
+          <div class="page-header__nav-col monts">10</div>
+          <div class="page-header__nav-text">Корзина</div>
+        </a>
+        <a class="page-header__nav-link" href="/login.html">
+          <svg class="page-header__nav-svg account" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#account"></use>
+          </svg>
+          <svg class="page-header__nav-svg log-in" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#log-in"></use>
+          </svg>
+          <div class="page-header__nav-text">Личный кабинет</div>
+        </a>
       </nav>
 
       <div class="page-header__right-block">
-        <a href="#" class="page-header__user-btn">Войти
-          <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/symbols.svg#user"></use>
-          </svg>
-        </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" id="js-navToggle" class="page-header__nav-toggle"></button>
       </div>
     </div>
-
   </header>
   <main class="main">
     <article class="article">
       <div class="article__container">
-        <h1 class="article__title title">Заголовок страницы</h1>
+        <h1 class="article__title">ТИПОГРАФИКА</h1>
         <div class="article__content content">
           <h1>Заголовок h1</h1>
           <h2>Заголовок h2</h2>
@@ -61,92 +85,105 @@
           <h5>Заголовок h5</h5>
           <h6>Заголовок h6</h6>
 
-          <p>Абзац текста, содержащий <b>жирный</b> текст и <a href="https://tagree.ru/" target="_blank">ссылку</a>.</p>
+          <p class="text__title">Заголовок текстового блока</p>
+
+          <p>С точки зpения банальной эpyдиции каждый индивидyyм, кpитически мотивиpyющий абстpакцию, не может игноpиpовать кpитеpии yтопического сyбьективизма, концептyально интеpпpетиpyя общепpинятые дефанизиpyющие поляpизатоpы.</p>
+          <p>Поэтомy <u>
+              <b>консенсyс</b>
+            </u>, достигнyтый диалектической матеpиальной классификацией всеобщих мотиваций в паpадогматических связях пpедикатов, pешает пpоблемy yсовеpшенствования фоpмиpyющих геотpансплантационных квазипyзлистатов всех кинетически <b>коpеллиpyющих аспектов.</b>
+          </p>
+          <p class="text__bold">P bold: коpеллиpyющих аспектов.</p>
+          <a href="#">консенсyс</a>
+          <p class="text__bold">Ненумерованный список</p>
           <ul>
-            <li>Элемент списка 1</li>
-            <li>Элемент списка 2</li>
-            <li>Элемент списка 3</li>
+            <li>20:15 — Приветствие гостей</li>
+            <li>20:30 — Первая подача блюд | Салаты</li>
+            <li>20:40 — Живой вокал | Композиции 1-3</li>
+            <li>21:20 — Подача горячих блюд</li>
           </ul>
+          <p class="text__bold">Нумерованный список</p>
           <ol>
-            <li>Элемент списка 1</li>
-            <li>Элемент списка 2</li>
-            <li>Элемент списка 3</li>
+            <li>Your Love Is King</li>
+            <li>Hang On To Your Love</li>
+            <li>Smooth Operator</li>
+            <li>Jezebel</li>
           </ol>
+
+          <p class="text__bold">Цитата</p>
           <blockquote>
-            Здесь содержится цитата
+            Трансцендентная дискретизация контрамоции не должна аннигилировать с ка-гамма-плазмоином в мю-дельта-ионопластовой среде.
           </blockquote>
-          <img src="assets/images/image.jpg" alt="Подпись картинки">
+          <p>Нельзя забывать, что разлагая ультрамасштабированную гиперонноаттрофированную неквантованную функцию аппроксимирования позитронного стабилотрона в ряд декомпрессированных математических экзистенциальных субрудиментов, необходимо прибегнуть к методу упорядочивания гипертронических дисперсионных антикварков.</p>
+          <img src="assets/images/default/image.jpg" alt="Подпись картинки">
+          <figcaption>Подпись картинки</figcaption>
+          <p>Остаётся лишь добавить, что предложенный вами конгрессивный подход к декуляризированию «индивидyyма, кpитически мотивиpyющего абстpакцию» является неприемлимым в данном временном континууме на данном этапе научно-технического прогресса.</p>
         </div>
+
       </div>
     </article>
   </main>
-  <footer class="page-footer">
-    <div class="footer">
 
-      <div class="footer__stripe">
-        <div class="footer__stripe-left"></div>
-        <div class="footer__stripe-right"></div>
-      </div>
-
-      <div class="footer__block">
-
-        <nav class="footer__menu">
-          <a href="" class="footer__menu-link">Календарь мероприятий</a>
-          <a href="" class="footer__menu-link">Провести мероприятие</a>
-          <a href="" class="footer__menu-link">Стать арендатором</a>
-          <a href="" class="footer__menu-link">Наши проекты</a>
-          <a href="" class="footer__menu-link">Контакты</a>
-        </nav>
-
-        <div class="footer__form">
-          <p class="footer__form-text">Подпишись и будь в курсе происходящего</p>
-          <form action="/" class="footer__form-form">
-            <div class="footer__form-bl">
-              <input class="footer__form-input" type="email" placeholder="Email">
-              <button type="submit" class="footer__form-submit">Отправить</button>
-            </div>
-
-            <div class="form__check-list">
-              <label class="form__check check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label">Согласен на обработку персональных данных</span>
-              </label>
-            </div>
-
-          </form>
-        </div>
-
-      </div>
-      <div class="footer__copyright">
-        <div class="footer__copyright-policy">
-          <p class="footer__copyright-copyr">© Millennials 2022</p>
-          <div class="footer__copyright-block">
-            <a href="" class="footer__copyright-block-link">Политика конфиденциальности</a>
-            <a href="" class="footer__copyright-block-link">Cookies</a>
+  <div class="footer monts">
+    <div class="footer__logo">
+      <img src="assets/images/header/logo.png" alt="logo" class="footer__logo-img">
+    </div>
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__content-menus">
+          <div class="footer__content-menus-menu">
+            <h2 class="footer__content-menus-title">Каталог</h2>
+            <a href="" class="footer__content-menus-link">Коллекция 1982</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1986</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1987</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1988</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1989</a>
+          </div>
+          <div class="footer__content-menus-menu">
+            <h2 class="footer__content-menus-title">Покупателю</h2>
+            <a href="" class="footer__content-menus-link">Как сделать заказ</a>
+            <a href="" class="footer__content-menus-link">Правила возврата</a>
+            <a href="" class="footer__content-menus-link">Контакты</a>
           </div>
         </div>
-        <div class="footer__copyright-social">
-          <a href="" class="footer__copyright-social-icon">
-            <svg class="footer__copyright-svg">
-              <use xlink:href="assets/icons/symbols.svg#insta"></use>
-            </svg>
-          </a>
-          <a href="" class="footer__copyright-social-icon">
-            <svg class="footer__copyright-svg">
-              <use xlink:href="assets/icons/symbols.svg#vk"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="footer__copyright-promotion">
-          <a href="" class="footer__copyright-promotion-link">Создание и продвижение</a>
-          <svg class="footer__copyright-promotion-svg">
-            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-          </svg>
+        <div class="footer__content-social">
+          <h2 class="footer__content-social-title">На связи</h2>
+          <div class="footer__content-social-links">
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#telegram"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#whatsapp"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#vk"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+      <div class="footer__policy">
+        <a href="" class="footer__policy-link">Политика конфиденциальности</a>
+        <a href="" class="footer__policy-link">Cookies</a>
+      </div>
     </div>
-  </footer>
+  </div>
+  <script type="text/javascript" src="/scripts/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery-ui-1.14.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.selectric.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="/scripts/air-datepicker.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate-init.js"></script>
+  <script type="text/javascript" src="/scripts/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="/scripts/price.js"></script>
+  <script type="text/javascript" src="/scripts/main.min.js"></script>
+
 </body>
 
 </html>

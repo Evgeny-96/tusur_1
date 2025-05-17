@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+   @@include('blocks/page-header.html', {'class': 'user'})
+   <div class="breadcrumbs monts">
+      <div class="breadcrumbs__list">
+         @@loop('blocks/breadcrumbs.html', [
+         {
+         "link": "/",
+         "class": "breadcrumbs",
+         "text": "Главная"
+         },
+         {
+         "link": "#",
+         "class": "breadcrumbs",
+         "text": "Каталог"
+         }
+         ])
+         <a href="#" class="breadcrumbs__list-svg">
+            <svg class="svg">
+               <use xlink:href="assets/icons/symbols.svg#arrow_left"></use>
+            </svg>
+         </a>
+      </div>
+   </div>
+
+   <main class="main">
+      <div class="catalog">
+         <div class="catalog__container">
+            <h1 class="catalog__title title">Каталог</h1>
+            <div class="catalog__content">
+               @@include('blocks/catalog-sidebar.html')
+               @@include('blocks/catalog-gallery.html')
+            </div>
+         </div>
+
+      </div>
+   </main>
+   @@include('blocks/page-footer.html')
+   @@include('blocks/page-footer-scripts.html')
+</body>
+
+</html>

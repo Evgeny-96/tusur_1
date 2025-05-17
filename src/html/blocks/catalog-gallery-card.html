@@ -1,0 +1,33 @@
+@@slide-start
+<div class="gallery__card@@class">
+   <span class="gallery__card-link">
+      <svg class="gallery__card-svg" width="24" height="24">
+         <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+      </svg>
+   </span>
+   <a href="" class="gallery__card-link-picture">
+      <picture class="gallery__card-picture">
+         <source media="(max-width: 450px)" type="image/webp" srcset="@@img_mob_webp" />
+         <source media="(max-width: 450px)" srcset="@@img_mob" />
+         <source media="(max-width: 1169px)" type="image/webp" srcset="@@img_tablet_webp" />
+         <source media="(max-width: 1169px)" srcset="@@img_tablet" />
+         <source type="image/webp" srcset="@@img_webp" />
+         <img src="@@img" alt="@@alt" class="gallery__card-img" />
+      </picture>
+   </a>
+   <div class="gallery__card-descr">
+      <div class="gallery__card-descr-text">
+         <div class="gallery__card-price">@@price</div>
+         <div class="gallery__card-poster">
+            <div class="gallery__card-poster-name">@@name</div>
+            <div class="gallery__card-poster-sizes">@@sizes</div>
+         </div>
+      </div>
+      <span class="gallery__card-link">
+         <svg class="gallery__card-svg" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#cart"></use>
+         </svg>
+      </span>
+   </div>
+</div>
+@@slide-end

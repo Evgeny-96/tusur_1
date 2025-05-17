@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+   @@include('blocks/page-header.html')
+   <main class="main">
+      <div class="login monts">
+         <div class="login__container">
+            <h1 class="login__title title mon">Регистрация</h1>
+            <div class="login__subtitle">
+               <p class="login__subtitle-text">Уже есть авторизованный аккаунт?</p>
+               <button type="button" class="login__subtitle-btn">Войти</button>
+            </div>
+            <form action="https://jsonplaceholder.typicode.com/posts" class="login__form form monts" id="js-loginForm">
+
+               <div class="form__section">
+               
+                  <label class="field form__field">
+                     <span class="field__label required">E-mail</span>
+                     <input id="js-registrationEmail" class="field__input" type="email" placeholder="Введи свой e-mail" name="email" required />
+                  </label>
+
+                  <label class="field form__field">
+                     <span class="field__label">Телефон</span>
+                     <input id="js-registrationTel" class="field__input js-mobileMask" type="tel" placeholder="Укажи свой телефон" name="phone" />
+                  </label>
+
+                  <label class="field form__field">
+                     <span class="field__label required">Имя</span>
+                     <input id="js-registrationName" class="field__input" type="text" placeholder="Укажи имя" name="name" required />
+                  </label>
+
+                  <label class="field form__field">
+                     <span class="field__label required">Фамилия</span>
+                     <input class="field__input" type="text" placeholder="Укажи фамилию" name="last_name" required />
+                  </label>
+            
+                  <label class="field form__field">
+                     <span class="field__label required">Пароль</span>
+                     <input class="field__input" type="password" placeholder="Придумай пароль" name="password" required />
+                  </label>
+
+                  <label class="field form__field">
+                     <span class="field__label required">Подтверждение пароля</span>
+                     <input class="field__input" type="password" placeholder="Повтори пароль" name="password" required />
+                  </label>
+            
+                  <label class="field form__field field--last">
+                     <span class="field__label">Страна</span>
+                     <select class="field__select" name="country">
+                        <option disabled selected value="Russia">Россия</option>
+                        <option value="Australia">Австралия</option>
+                        <option value="Austria">Австрия</option>
+                        <option value="Azerbaijan">Азербайджан</option>
+                        <option value="Albania">Албания</option>
+                     </select>
+                  </label>
+
+                  <div class="field form__field field--last js-dateField">
+                     <span class="field__label">Дата рождения</span>
+                     <span class="field__date-block">
+                        <span class="field__date">
+                           <span class="field__date-inputs">
+                              <input class="field__date-input js-dateDay" type="text" placeholder="дд" readonly />
+                              <input class="field__date-input js-dateMonth" type="text" placeholder="мм" readonly />
+                              <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="гг"
+                                 readonly />
+                           </span>
+                           <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+                        </span>
+                        <span class="field__date-svg">
+                           <svg class="svg">
+                              <use xlink:href="assets/icons/symbols.svg#calendar"></use>
+                           </svg>
+                        </span>
+                     </span>
+                  </div>
+
+               </div>
+
+               <div class="form__check-list">
+                  <label class="form__check check">
+                     <input type="checkbox" name="agree" class="check__input" required checked />
+                     <span class="check__mark"></span>
+                     <span class="check__label check__label-login">Нажимая «Создать аккаунт», я подтверждаю, что ознакомился с положениями, указанными в статьях <a href="#" class="check__link">Условия использования</a> и <a href="#" class="check__link">Политика конфиденциальности.</a></span>
+                  </label>
+               </div>
+
+               <button type="submit" class="btn form__submit">Создать аккаунт</button>
+
+
+            </form>
+         </div>
+
+      </div>
+   </main>
+   @@include('blocks/page-footer.html')
+   @@include('blocks/page-footer-scripts.html')
+</body>
+
+</html>

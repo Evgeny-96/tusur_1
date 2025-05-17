@@ -1,0 +1,127 @@
+.swiper {
+   &-slide {
+      height: auto;
+      display: flex;
+   }
+
+   &--vw {
+      width: 100vw;
+      position: relative;
+      z-index: 1;
+      overflow: inherit;
+
+      .swiper-slide {
+         box-sizing: border-box;
+         width: 466px;
+
+         @media @bw1340 {
+            width: 260px;
+         }
+
+         @media @bw768 {
+            width: 248px;
+         }
+
+         &>* {
+            width: 100%;
+         }
+      }
+   }
+
+   &--4s {
+      width: 100%;
+
+      .swiper-slide {
+         box-sizing: border-box;
+         width: calc(100% / 4);
+
+         @media @bw1020 {
+            width: calc(100% / 2);
+            max-width: 354px;
+         }
+
+         @media @bw768 {
+            width: 100%;
+            max-width: 280px;
+         }
+      }
+
+      .gallery__card {
+         width: 100%;
+
+         @media @bw1020 {
+            width: 100%;
+            max-width: 100%;
+         }
+
+         @media @bw768 {
+            max-width: 280px;
+         }
+      }
+   }
+
+   &-footer {
+      position: absolute;
+      width: 540px;
+      height: 540px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 6px solid @black;
+      top: calc(50% - 36px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      @media @bw1340 {
+         width: 302px;
+         height: 302px;
+         align-items: flex-end;
+      }
+
+      @media @bw1020 {
+         border-width: 3px;
+      }
+
+      @media @bw768 {
+         width: 280px;
+         height: 280px;
+      }
+   }
+
+   &-navigation {
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 24px;
+
+      @media @bw768 {
+         margin-top: 24px;
+         margin-bottom: 0;
+         justify-content: center;
+      }
+      
+      .arrow {
+         bottom: 0;
+         position: inherit;
+         background-color: transparent;
+      }
+   }
+}
+
+.--mob {
+
+   @media @bw768 {
+      display: none;
+   }
+}
+
+.--desk {
+
+   @media @w768 {
+      display: none;
+   }
+}

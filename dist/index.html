@@ -1,562 +1,522 @@
 <!DOCTYPE html>
-<!-- <html lang="ru" class="show-event-popup"> -->
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Lenni Art</title>
+  <title>Кит Харинг</title>
+  <meta name="description" content="Постеры">
+  <meta name="keywords" content="Кит Харинг, постеры">
+
+  <!-- <meta property="og:title" content="Кит Харинг" />
+   <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+   <meta property="og:image" content="/assets/images/lenni-art.jpg">
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://lenni-art.ru/" /> -->
+
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+  <script src="https://api-maps.yandex.ru/v3/?apikey=26927e5a-d1a5-4328-90a9-b35c720cc653&lang=ru_RU"></script>
+  <script type="text/javascript" src="/scripts/map.min.js"></script>
+
 </head>
 
 <body class="body">
-  <header class="page-header">
+  <header class="page-header ">
     <div class="page-header__container">
-      <a href="#" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+      <a href="/catalog.html" class="page-header__catalog">
+        <svg class="page-header__catalog-icon" width="24" height="24">
+          <use xlink:href="assets/icons/symbols.svg#catalog"></use>
         </svg>
+        <div class="page-header__catalog-text">Каталог</div>
       </a>
-
+      <a href="/" class="page-header__logo">
+        <img src="assets/images/header/logo.png" alt="" class="page-header__logo-img">
+      </a>
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
-
-        <div class="page-header__nav-user">
-          <a href="#" class="page-header__nav-user-link">
-            Александр С.
-          </a>
-          <a href="#" class="page-header__nav-logout">
-            <svg class="page-header__nav-logout-icon" width="24" height="24">
-              <use xlink:href="assets/icons/symbols.svg#door"></use>
-            </svg>
-          </a>
-        </div>
+        <a class="page-header__nav-link" href="#">
+          <svg class="page-header__nav-svg" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#favourites"></use>
+          </svg>
+          <div class="page-header__nav-col monts">3</div>
+          <div class="page-header__nav-text">Избранное</div>
+        </a>
+        <a class="page-header__nav-link" href="#">
+          <svg class="page-header__nav-svg" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#cart"></use>
+          </svg>
+          <div class="page-header__nav-col monts">10</div>
+          <div class="page-header__nav-text">Корзина</div>
+        </a>
+        <a class="page-header__nav-link" href="/login.html">
+          <svg class="page-header__nav-svg account" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#account"></use>
+          </svg>
+          <svg class="page-header__nav-svg log-in" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#log-in"></use>
+          </svg>
+          <div class="page-header__nav-text">Личный кабинет</div>
+        </a>
       </nav>
 
       <div class="page-header__right-block">
-        <a href="#" class="page-header__user-btn">Войти
-          <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/symbols.svg#user"></use>
-          </svg>
-        </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" id="js-navToggle" class="page-header__nav-toggle"></button>
       </div>
     </div>
-
   </header>
 
   <main class="main">
     <div class="home">
-      <section class="space">
-        <h1 class="space__h1">Арт - пространство</h1>
-        <div class="space__title">
-          <svg>
-            <use xlink:href="assets/icons/symbols.svg#lenni"></use>
-          </svg>
-        </div>
-        <p class="space__p">Для людей, горящих сердцем и делом</p>
-        <p class="space__p">Место для настоящего</p>
-        <div class="space__wish">
-          <p class="space__wish-p">Я хочу</p>
-          <div class="space__btn">
-            <button type="submit" class="btn btn--red">Провести мероприятие</button>
-            <button type="submit" class="btn btn--white">Стать арендатором</button>
+      <section class="seem">
+        <div class="seem__container">
+          <div class="seem__main">
+            <div class="seem__main-seem">
+              <svg class="seem__main-seem-svg">
+                <use xlink:href="assets/icons/symbols.svg#union"></use>
+              </svg>
+              <svg class="seem__main-seem-svg--mob">
+                <use xlink:href="assets/icons/symbols.svg#union-mob"></use>
+              </svg>
+            </div>
+            <img src="assets/images/main-seen/seen.png" alt="" class="seem__img">
+            <ul class="seem__years mon">
+              <li class="seem__years-year">82</li>
+              <li class="seem__years-year">86</li>
+              <li class="seem__years-year active">87</li>
+              <li class="seem__years-year">88</li>
+              <li class="seem__years-year">89</li>
+            </ul>
           </div>
+
+          <div class="seem__collection">
+            <div class="seem__collection-block">
+              <p class="seem__collection-text monts">Коллекция</p>
+              <p class="seem__collection-text-bold mon">1987</p>
+            </div>
+            <button class="btn">Смотреть</button>
+          </div>
+
         </div>
       </section>
-      <section class="about">
-        <h2 class="section-title">О нас</h2>
-        <div class="about__block">
-          <h3 class="about__title">Проект «Millennials»</h3>
-          <p class="about__content about__content-grid">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
-            желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их
-            мечту в реальность.</p>
-          <picture class="about__picture">
-            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/sebastiaan_mob.webp" />
-            <source media="(max-width: 450px)" srcset="assets/images/about/sebastiaan_mob.jpg" />
-            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/sebastiaan_tablet.webp" />
-            <source media="(max-width: 1169px)" srcset="assets/images/about/sebastiaan_tablet.jpg" />
-            <source type="image/webp" srcset="assets/images/about/sebastiaan.webp" />
-            <img src="assets/images/about/sebastiaan.jpg" alt="sebastiaan" class="about__img" />
-          </picture>
-          <picture class="about__picture">
-            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/matheus_mob.webp" />
-            <source media="(max-width: 450px)" srcset="assets/images/about/matheus_mob.jpg" />
-            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/matheus_tablet.webp" />
-            <source media="(max-width: 1169px)" srcset="assets/images/about/matheus_tablet.jpg" />
-            <source type="image/webp" srcset="assets/images/about/matheus.webp" />
-            <img src="assets/images/about/matheus.jpg" alt="sebastiaan" class="about__img" />
-          </picture>
-          <h3 class="about__title">Мы предоставляем площади для вашего мероприятия</h3>
-          <p class="about__content about__content-grid">И оказываем помощь с организацией, если вам это нужно.
-            <br />Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
-          </p>
-          <picture class="about__picture">
-            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/about/riciardus_mob.webp" />
-            <source media="(max-width: 450px)" srcset="assets/images/about/riciardus_mob.jpg" />
-            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/about/riciardus_tablet.webp" />
-            <source media="(max-width: 1169px)" srcset="assets/images/about/riciardus_tablet.jpg" />
-            <source type="image/webp" srcset="assets/images/about/riciardus.webp" />
-            <img src="assets/images/about/riciardus.jpg" alt="riciardus" class="about__img" />
-          </picture>
-          <div class="about__look">
-            <p class="about__look-content">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
-            <a href="#" class="about__link">
-              <p class="about__link-text">Смотреть</p>
-              <!-- <button type="button" class="arrow"> -->
-              <div class="arrow">
-                <svg class="arrow__icon" width="92" height="60">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
+      <section class="haring">
+        <div class="haring__container">
+          <div class="haring__about">
+            <div class="haring__about-desc">
+              <h1 class="haring__about-desc-title title">Кит Харинг</h1>
+              <p class="haring__about-desc-text monts">Застенчивый очкарик и гений поп-арта Кит Харинг родился 4 мая 1958 года в Пенсильвании.</p>
+              <p class="haring__about-desc-text monts">История его жизни вписывается в представления о жизни гения поп-арта: родился, жил, творил, был гомосексуалистом и рано умер от СПИДа.</p>
+            </div>
+            <div class="haring__about-image">
+              <img src="assets/images/main-haring/haring.jpg" alt="" class="haring__about-image-img">
+              <div class="haring__about-image-signature monts">
+                <div class="haring__about-image-signature-svg">
+                  <svg class="svg">
+                    <use xlink:href="assets/icons/symbols.svg#signature-haring"></use>
+                  </svg>
+                </div>
+                <p class="haring__about-image-signature--text">Кит Харинг, 1982 г.</p>
               </div>
-              <!-- </button> -->
-            </a>
+              <a href="/article.html" class="btn haring__about-btn">Читать статью</a>
+            </div>
           </div>
         </div>
       </section>
-      <section class="home__listing">
-        <div class="listing events__listing">
-          <h2 class="listing__title section-title">Мероприятия</h2>
-          <div class="listing__events-list">
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/nirvana_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
-                  <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+      <section class="posters">
+        <div class="posters__container">
+          <h2 class="posters__title title">Популярные постеры</h2>
+        </div>
+        <div class="posters__sliders swiper swiper--vw js-swiper js-centeredSlides">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture dark_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/01-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/01-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/01-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/01-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/01.webp" />
+                  <img src="assets/images/main-posters/01.jpg" alt="alt-01" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana</h3>
-                <p class="event-card__description">Это третий альбом группы...</p>
-                <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/stuff_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/stuff.webp" />
-                  <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+                <p class="posters-card__descr monts">Описание изображения-01</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture red">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/02-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/02-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/02-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/02-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/02.webp" />
+                  <img src="assets/images/main-posters/02.jpg" alt="alt-02" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
-                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
-                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/sade_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/sade_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/sade_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/sade_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/sade.webp" />
-                  <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
+                <p class="posters-card__descr monts">Описание изображения-02</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture orange">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/03-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/03-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/03-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/03-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/03.webp" />
+                  <img src="assets/images/main-posters/03.jpg" alt="alt-03" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Вечер | The Best of Sade</h3>
-                <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-                <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/exhibition_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/exhibition_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/exhibition_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/exhibition_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/exhibition.webp" />
-                  <img src="assets/images/events/exhibition.jpg" alt="exhibition" class="event-card__img" />
+                <p class="posters-card__descr monts">Описание изображения-03</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture green">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/04-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/04-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/04-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/04-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/04.webp" />
+                  <img src="assets/images/main-posters/04.jpg" alt="alt-04" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Выставка Малевича в Томске</h3>
-                <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
-                <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/mater-class_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/mater-class_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/mater-class_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/mater-class_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/mater-class.webp" />
-                  <img src="assets/images/events/mater-class.jpg" alt="mater-class" class="event-card__img" />
+                <p class="posters-card__descr monts">Описание изображения-04</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture soft_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/05-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/05-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/05-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/05-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/05.webp" />
+                  <img src="assets/images/main-posters/05.jpg" alt="alt-05" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h3>
-                <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
-                <time datetime="2022-12-25T13:00" class="event-card__time">25.12.2022 | начало 13.00</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/hatters_mob.webp" />
-                  <source media="(max-width: 450px)" srcset="assets/images/events/hatters_mob.jpg" />
-                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/hatters_tablet.webp" />
-                  <source media="(max-width: 1169px)" srcset="assets/images/events/hatters_tablet.jpg" />
-                  <source type="image/webp" srcset="assets/images/events/hatters.webp" />
-                  <img src="assets/images/events/hatters.jpg" alt="hatters" class="event-card__img" />
+                <p class="posters-card__descr monts">Описание изображения-05</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture yelllow">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/06-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/06-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/06-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/06-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/06.webp" />
+                  <img src="assets/images/main-posters/06.jpg" alt="alt-06" class="posters-card__img" />
                 </picture>
-                <h3 class="event-card__title">Повесилимся на славу на концерте The Hatters</h3>
-                <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко</p>
-                <time datetime="2022-12-27T10:00" class="event-card__time">27.12.2022 | начало 10.00</time>
-              </a>
-            </article>
+                <p class="posters-card__descr monts">Описание изображения-06</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture dark_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/07-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/07-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/07-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/07-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/07.webp" />
+                  <img src="assets/images/main-posters/07.jpg" alt="alt-07" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-07</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture red">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/08-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/08-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/08-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/08-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/08.webp" />
+                  <img src="assets/images/main-posters/08.jpg" alt="alt-08" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-08</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture orange">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/08-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/08-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/08-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/08-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/08.webp" />
+                  <img src="assets/images/main-posters/08.jpg" alt="alt-08" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-08</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture green">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/09-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/09-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/09-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/09-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/09.webp" />
+                  <img src="assets/images/main-posters/09.jpg" alt="alt-09" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-09</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture soft_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/10-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/10-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/10-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/10-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/10.webp" />
+                  <img src="assets/images/main-posters/10.jpg" alt="alt-10" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-10</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture yelllow">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/11-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/11-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/11-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/11-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/11.webp" />
+                  <img src="assets/images/main-posters/11.jpg" alt="alt-11" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-11</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture dark_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/12-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/12-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/12-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/12-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/12.webp" />
+                  <img src="assets/images/main-posters/12.jpg" alt="alt-12" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-12</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture red">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/13-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/13-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/13-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/13-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/13.webp" />
+                  <img src="assets/images/main-posters/13.jpg" alt="alt-13" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-13</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture orange">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/14-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/14-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/14-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/14-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/14.webp" />
+                  <img src="assets/images/main-posters/14.jpg" alt="alt-14" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-14</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture green">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/15-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/15-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/15-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/15-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/15.webp" />
+                  <img src="assets/images/main-posters/15.jpg" alt="alt-15" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-15</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture soft_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/16-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/16-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/16-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/16-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/16.webp" />
+                  <img src="assets/images/main-posters/16.jpg" alt="alt-16" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-16</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture yelllow">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/17-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/17-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/17-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/17-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/17.webp" />
+                  <img src="assets/images/main-posters/17.jpg" alt="alt-17" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-17</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture dark_blue">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/18-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/18-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/18-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/18-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/18.webp" />
+                  <img src="assets/images/main-posters/18.jpg" alt="alt-18" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-18</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture red">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/19-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/19-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/19-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/19-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/19.webp" />
+                  <img src="assets/images/main-posters/19.jpg" alt="alt-19" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-19</p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="posters-card">
+                <picture class="posters-card__picture orange">
+                  <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/main-posters/20-mob.webp" />
+                  <source media="(max-width: 450px)" srcset="assets/images/main-posters/20-mob.jpg" />
+                  <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/main-posters/20-tablet.webp" />
+                  <source media="(max-width: 1169px)" srcset="assets/images/main-posters/20-tablet.jpg" />
+                  <source type="image/webp" srcset="assets/images/main-posters/20.webp" />
+                  <img src="assets/images/main-posters/20.jpg" alt="alt-20" class="posters-card__img" />
+                </picture>
+                <p class="posters-card__descr monts">Описание изображения-20</p>
+              </article>
+            </div>
           </div>
-          <div class="pagination">
-            <button type="button" class="arrow pagination__prev">
-              <svg class="arrow__icon" width="92" height="62">
+          <footer class="swiper-footer">
+            <button type="button" class="swiper-arrow-prev arrow arrow--left">
+              <svg class="arrow__icon">
                 <use xlink:href="assets/icons/symbols.svg#arrow_prev"></use>
               </svg>
             </button>
-            <div class="pagination__dot"></div>
-            <div class="pagination__dot"></div>
-            <div class="pagination__dot active"></div>
-            <div class="pagination__dot"></div>
-            <div class="pagination__dot"></div>
-            <button type="button" class="arrow pagination__next">
-              <svg class="arrow__icon" width="92" height="62">
-                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            <button type="button" class="swiper-arrow-next arrow arrow--right">
+              <svg class="arrow__icon">
+                <use xlink:href="assets/icons/symbols.svg#arrow_next"></use>
               </svg>
             </button>
+          </footer>
+        </div>
+      </section>
+      <div class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title title">Адреса магазинов</h2>
+          <div class="contacts__content">
+            <div class="contacts__cards">
+              <a class="contacts__cards-card">
+                <div class="contacts__cards-title mon">Pop Shop
+                  <br />«1987»
+                </div>
+                <div class="contacts__cards-addr monts">Проспект Ленина, 121
+                  <br />
+                  <b>ЦУМ</b>, торговый центр
+                </div>
+                <div class="contacts__cards-time monts">Открыто до 21.00</div>
+              </a>
+              <a class="contacts__cards-card">
+                <div class="contacts__cards-title mon">Pop Shop
+                  <br />«Лающая собака»
+                </div>
+                <div class="contacts__cards-addr monts">Проспект Ленина, 15
+                  <br />
+                  <b>999</b>, торговый центр
+                </div>
+                <div class="contacts__cards-time monts">Открыто до 21.00</div>
+              </a>
+            </div>
+            <div id="js-contactsMap" class="contacts__map"></div>
           </div>
-          <a href="#" class="home__all">Смотреть всё</a>
         </div>
-      </section>
-      <section class="home__blog listing events__listing">
-        <h2 class="listing__title section-title">Блог</h2>
-        <div class="listing__article-list">
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre_mob.webp" />
-                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre_mob.jpg" />
-                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
-                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
-                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
-                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
-              <a href="#" class="article-card__title-link">
-                <h3 class="article-card__title">Фотосессия в стенах Театра драмы</h3>
-                <!-- <button type="button" class="arrow"> -->
-                <div class="arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-                <!-- </button> -->
-              </a>
-              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было</p>
-            </div>
-          </article>
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/vr_mob.webp" />
-                <source media="(max-width: 450px)" srcset="assets/images/blog/vr_mob.jpg" />
-                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/vr_tablet.webp" />
-                <source media="(max-width: 1169px)" srcset="assets/images/blog/vr_tablet.jpg" />
-                <source type="image/webp" srcset="assets/images/blog/vr.webp" />
-                <img src="assets/images/blog/vr.jpg" alt="выставка VR" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
-              <a href="#" class="article-card__title-link">
-                <h3 class="article-card__title">Выставка VR в Томске</h3>
-                <!-- <button type="button" class="arrow"> -->
-                <div class="arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-                <!-- </button> -->
-              </a>
-              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
-            </div>
-          </article>
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio_mob.webp" />
-                <source media="(max-width: 450px)" srcset="assets/images/blog/radio_mob.jpg" />
-                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
-                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
-                <source type="image/webp" srcset="assets/images/blog/radio.webp" />
-                <img src="assets/images/blog/radio.jpg" alt="rocking radio" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
-              <a href="#" class="article-card__title-link">
-                <h3 class="article-card__title">Rocking radio в заброшенном ангаре</h3>
-                <!-- <button type="button" class="arrow"> -->
-                <div class="arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-                <!-- </button> -->
-              </a>
-              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
-            </div>
-          </article>
-        </div>
-        <a href="#" class="listing__link link">Смотреть все</a>
-      </section>
-      <section class="home__contacts listing events__listing contacts">
-        <h2 class="listing__title section-title">Контакты</h2>
-        <div class="contacts__block">
-          <div class="contacts__places">
-            <div class="contacts__place">
-              <div class="contacts__place-img">
-                <svg class="contacts__place-icon" width="24" height="24">
-                  <use xlink:href="assets/icons/symbols.svg#circle"></use>
-                </svg>
-              </div>
-              <div class="contacts__place-addr">
-                <h3 class="contacts__place-title">Томск, Белая 8</h3>
-                <p class='contacts__place-text'>2 этаж</p>
-                <p class='contacts__place-text'>оф. 207-208</p>
-              </div>
-            </div>
-            <div class="contacts__place">
-              <div class="contacts__place-img">
-                <svg class="contacts__place-icon" width="24" height="24">
-                  <use xlink:href="assets/icons/symbols.svg#house"></use>
-                </svg>
-              </div>
-              <div class="contacts__place-addr">
-                <h3 class="contacts__place-title">Отдел аренды</h3>
-                <a href='tel:74993500730' class='contacts__place-tel'>+7 499 350 0730</a>
-                <a href='mailto:hi@tagree.ru' class='contacts__place-mail'>hi@tagree.ru</a>
-              </div>
-            </div>
-            <div class="contacts__place">
-              <div class="contacts__place-img">
-                <svg class="contacts__place-icon" width="24" height="24">
-                  <use xlink:href="assets/icons/symbols.svg#star"></use>
-                </svg>
-              </div>
-              <div class="contacts__place-addr">
-                <h3 class="contacts__place-title">Отдел мероприятий</h3>
-                <a href='tel:74993500730' class='contacts__place-tel'>+7 499 350 0730</a>
-                <a href='mailto:hi@tagree.ru' class='contacts__place-mail'>hi@tagree.ru</a>
-              </div>
-            </div>
-          </div>
-          <picture class="contacts__picture">
-            <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/contacts/map_mob.webp" />
-            <source media="(max-width: 450px)" srcset="assets/images/contacts/map_mob.jpg" />
-            <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/contacts/map_tablet.webp" />
-            <source media="(max-width: 1169px)" srcset="assets/images/contacts/map_tablet.jpg" />
-            <source type="image/webp" srcset="assets/images/contacts/map.webp" />
-            <img src="assets/images/about/map.jpg" alt="map" class="contacts__img" />
-          </picture>
-        </div>
-        <p class="contacts__quote">Просто делайте, что нравится, а мы вам поможем</p>
-      </section>
+      </div>
+
     </div>
   </main>
-  <footer class="page-footer">
-    <div class="footer">
-
-      <div class="footer__stripe">
-        <div class="footer__stripe-left"></div>
-        <div class="footer__stripe-right"></div>
-      </div>
-
-      <div class="footer__block">
-
-        <nav class="footer__menu">
-          <a href="" class="footer__menu-link">Календарь мероприятий</a>
-          <a href="" class="footer__menu-link">Провести мероприятие</a>
-          <a href="" class="footer__menu-link">Стать арендатором</a>
-          <a href="" class="footer__menu-link">Наши проекты</a>
-          <a href="" class="footer__menu-link">Контакты</a>
-        </nav>
-
-        <div class="footer__form">
-          <p class="footer__form-text">Подпишись и будь в курсе происходящего</p>
-          <form action="/" class="footer__form-form">
-            <div class="footer__form-bl">
-              <input class="footer__form-input" type="email" placeholder="Email">
-              <button type="submit" class="footer__form-submit">Отправить</button>
-            </div>
-
-            <div class="form__check-list">
-              <label class="form__check check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label">Согласен на обработку персональных данных</span>
-              </label>
-            </div>
-
-          </form>
-        </div>
-
-      </div>
-      <div class="footer__copyright">
-        <div class="footer__copyright-policy">
-          <p class="footer__copyright-copyr">© Millennials 2022</p>
-          <div class="footer__copyright-block">
-            <a href="" class="footer__copyright-block-link">Политика конфиденциальности</a>
-            <a href="" class="footer__copyright-block-link">Cookies</a>
-          </div>
-        </div>
-        <div class="footer__copyright-social">
-          <a href="" class="footer__copyright-social-icon">
-            <svg class="footer__copyright-svg">
-              <use xlink:href="assets/icons/symbols.svg#insta"></use>
-            </svg>
-          </a>
-          <a href="" class="footer__copyright-social-icon">
-            <svg class="footer__copyright-svg">
-              <use xlink:href="assets/icons/symbols.svg#vk"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="footer__copyright-promotion">
-          <a href="" class="footer__copyright-promotion-link">Создание и продвижение</a>
-          <svg class="footer__copyright-promotion-svg">
-            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-          </svg>
-        </div>
-      </div>
+  <div class="footer monts">
+    <div class="footer__logo">
+      <img src="assets/images/header/logo.png" alt="logo" class="footer__logo-img">
     </div>
-  </footer>
-  <div class="pp" id="eventPP">
-    <div class="pp__wrapper">
-      <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
-          <svg class="x-btn__icon" width="12" height="12">
-            <use xlink:href="assets/icons/symbols.svg#x"></use>
-          </svg>
-        </button>
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__content-menus">
+          <div class="footer__content-menus-menu">
+            <h2 class="footer__content-menus-title">Каталог</h2>
+            <a href="" class="footer__content-menus-link">Коллекция 1982</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1986</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1987</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1988</a>
+            <a href="" class="footer__content-menus-link">Коллекция 1989</a>
+          </div>
+          <div class="footer__content-menus-menu">
+            <h2 class="footer__content-menus-title">Покупателю</h2>
+            <a href="" class="footer__content-menus-link">Как сделать заказ</a>
+            <a href="" class="footer__content-menus-link">Правила возврата</a>
+            <a href="" class="footer__content-menus-link">Контакты</a>
+          </div>
+        </div>
+        <div class="footer__content-social">
+          <h2 class="footer__content-social-title">На связи</h2>
+          <div class="footer__content-social-links">
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#telegram"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#whatsapp"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__content-social-link">
+              <svg class="svg">
+                <use xlink:href="assets/icons/symbols.svg#vk"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="pp__container">
-        <h2 class="pp__title">Заполните форму
-          <br />и мы подберем площадку
-        </h2>
-        <form class="pp__form form">
-          <div class="form__list">
-            <div class="field form__field form__field--w50">
-              <h3 class="field__title">Формат мероприятия:</h3>
-
-              <div class="field__radio radio">
-                <label class="radio__item">
-                  <input class="radio__input" type="radio" name="format" value="seminar" checked />
-                  <span class="radio__mark"></span>
-                  <span class="radio__label">Мастер-класс/семинар</span>
-                </label>
-
-                <label class="radio__item">
-                  <input class="radio__input" type="radio" name="format" value="concert" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__label">Концерт/выступление</span>
-                </label>
-
-                <label class="radio__item">
-                  <input class="radio__input" type="radio" name="format" value="show" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__label">Выставка/показ</span>
-                </label>
-
-                <label class="radio__item">
-                  <input class="radio__input" type="radio" name="format" value="other" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__label">Другое</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form__group form__group--w50">
-              <div class="form__field field">
-                <h3 class="field__title">Планируемое количество посетителей:</h3>
-
-                <select class="field__select" name="amount">
-                  <option disabled selected value>Выберите планируемое число посетителей</option>
-                  <option value="20">до 20 человек</option>
-                  <option value="100">от 20 до 100 человек</option>
-                  <option value="500">от 100 до 500 человек</option>
-                  <option value="1000">более 500 человек</option>
-                </select>
-              </div>
-
-              <div class="form__field field">
-                <h3 class="field__title">Дата проведения:</h3>
-
-                <div class="field__date-inputs">
-                  <input class="field__date-input" type="text" placeholder="ДД" />
-                  <input class="field__date-input" type="text" placeholder="ММ" />
-                  <input class="field__date-input field__date-input--year" type="text" placeholder="ГГГГ" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="form__section">
-            <h3 class="form__section-title">Контакные данные:</h3>
-
-            <div class="form__list">
-              <label class="field form__field form__field--w50">
-                <span class="field__label">Имя*</span>
-                <input class="field__input" type="text" placeholder="Имя" name="name" required />
-              </label>
-
-              <label class="field form__field form__field--w50">
-                <span class="field__label">Фамилия*</span>
-                <input class="field__input" type="text" placeholder="Фамилия" name="last_name" required />
-              </label>
-
-              <label class="field form__field form__field--w50">
-                <span class="field__label">Телефон*</span>
-                <input class="field__input" type="tel" placeholder="Телефон" name="phone" required />
-              </label>
-
-              <label class="field form__field form__field--w50">
-                <span class="field__label">Email *</span>
-                <input class="field__input" type="email" placeholder="Email" name="email" required />
-              </label>
-            </div>
-          </div>
-
-          <label class="field form__field">
-            <span class="field__title">Есть пожелания? Напишите&nbsp;нам:</span>
-            <textarea class="field__textarea" name="Пожелания"></textarea>
-          </label>
-
-          <div class="form__check-list">
-            <label class="form__check check">
-              <input type="checkbox" name="agree" class="check__input" required checked />
-              <span class="check__mark"></span>
-              <span class="check__label check__label--s">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
-            </label>
-          </div>
-
-          <div class="form__btns">
-            <button type="submit" class="btn form__submit form__submit--w50">Отправить</button>
-            <button type="button" class="form__close-btn">Закрыть</button>
-          </div>
-        </form>
+      <div class="footer__policy">
+        <a href="" class="footer__policy-link">Политика конфиденциальности</a>
+        <a href="" class="footer__policy-link">Cookies</a>
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="/scripts/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery-ui-1.14.1.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.selectric.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="/scripts/air-datepicker.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate-init.js"></script>
+  <script type="text/javascript" src="/scripts/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="/scripts/price.js"></script>
+  <script type="text/javascript" src="/scripts/main.min.js"></script>
 </body>
 
 </html>

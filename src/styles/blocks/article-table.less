@@ -1,0 +1,162 @@
+.article-table {
+   width: 100%;
+   height: 100%;
+
+   &__container {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .container();
+      margin-top: 80px;
+
+      @media @bw1020 {
+         margin-top: 60px;
+      }
+
+      @media @bw768 {
+         padding-left: 0;
+         padding-right: 0;
+      }
+   }
+
+   &__title {
+      font-size: 40px;
+      align-self: center;
+      margin-bottom: 0;
+
+      @media @bw1020 {
+         font-size: 36px;
+      }
+   }
+
+   &__table {
+      margin-top: 40px;
+   }
+}
+
+.table {
+   width: 100%;
+   border-collapse: collapse;
+
+   &__head {
+
+      @media @bw768 {
+         display: none;
+      }
+
+      &-tr {
+         font-size: 18px;
+         text-transform: uppercase;
+         font-weight: 500;
+         margin: 0;
+
+         @media @bw1020 {
+            font-size: 16px;
+         }
+      }
+   }
+
+   &__th {
+      width: calc(100% / 4);
+      padding: 39px 0 36px;
+      box-sizing: border-box;
+
+      @media @bw1020 {
+         padding: 32px 0 28px;
+      }
+
+      @media @bw768 {
+         width: 100%;
+      }
+   }
+
+   &__body {
+      @media @bw768 {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__tr {
+      font-size: 18px;
+      border-bottom: 1px solid @black;
+
+      @media @bw1020 {
+         font-size: 16px;
+      }
+
+      @media @bw768 {
+         display: flex;
+         flex-direction: column;
+         border: none;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+
+      &-td {
+         box-sizing: border-box;
+         padding: 30px 0 25px;
+         text-align: center;
+
+         @media @bw1020 {
+            padding: 30px 0 28px;
+         }
+
+         @media @bw768 {
+            padding: 5px 0 5px 20px;
+            text-align: left;
+         }
+
+         &:not(:last-child) {
+
+            @media @bw768 {
+               margin-bottom: 15px;
+            }
+         }
+
+         &.--yellow,
+         &.--green,
+         &.--orange,
+         &.--soft-blue {
+            @media @w768 {
+               background-color: inherit;
+            }
+         }
+
+         &.--title &-title {
+            color: inherit;
+         }
+
+         &-title {
+            display: none;
+            font-size: 12px;
+
+            @media @bw768 {
+               display: block;
+               color: @gray_50;
+               margin-bottom: 5px;
+            }
+         }
+      }
+   }
+}
+
+.--yellow {
+   background-color: @yelllow;
+}
+
+.--green {
+   background-color: @green;
+}
+
+.--orange {
+   background-color: @orange;
+}
+
+.--soft-blue {
+   background-color: @soft_blue;
+}

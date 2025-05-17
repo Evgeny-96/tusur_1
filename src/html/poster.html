@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+   @@include('blocks/page-header.html')
+   <div class="breadcrumbs monts">
+      <div class="breadcrumbs__list">
+         @@loop('blocks/breadcrumbs.html', [
+         {
+         "link": "/",
+         "class": "breadcrumbs",
+         "text": "Главная"
+         },
+         {
+         "link": "#",
+         "class": "breadcrumbs",
+         "text": "Каталог"
+         },
+         {
+         "link": "#",
+         "class": "breadcrumbs",
+         "text": "Постер Andy Mouse | 60-60 см"
+         }
+         ])
+         <a href="#" class="breadcrumbs__list-svg">
+            <svg class="svg">
+               <use xlink:href="assets/icons/symbols.svg#arrow_left"></use>
+            </svg>
+         </a>
+      </div>
+   </div>
+
+   <div class="poster-main">
+      @@include('blocks/poster-card.html')
+      @@include('blocks/poster-desc.html')
+      @@include('blocks/posters-carousel.html')
+   </div>
+
+   @@include('blocks/page-footer.html')
+   @@include('blocks/page-footer-scripts.html')
+</body>
+
+</html>
